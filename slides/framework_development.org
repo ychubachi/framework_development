@@ -13,7 +13,6 @@
 
 #+LATEX_CLASS: beamer_lecture
 #+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
-# #+LaTeX_CLASS_OPTIONS: [t]
 
 #+TITLE: フレームワーク開発特論
 #+AUTHOR: 中鉢 欣秀
@@ -21,26 +20,24 @@
 
 #+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
 
-* 第1章 ガイダンス
-** 未整理
+* 第1章 開発環境の導入
+** 導入
 *** 自己紹介
+    - [[https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org][enpit/self_introduction.org at master · ychubachi/enpit]]
 
-*** 仮想化環境利用
+*** 仮想化環境の導入
   - Rubyの開発環境
     - enPiTの仮想環境を利用
   - インストールの方法
+    - 資料
+      - [[https://github.com/ychubachi/enpit/blob/master/slides/preparation.org][enpit/preparation.org at master · ychubachi/enpit]]
     - 動画を参照
+      - http://youtu.be/kePqg8dCgJM
 
 *** スケジュール
   - スケジュール
     Gitの使い方を先にやる
 
-　授業の開始前に事前準備を行っておいてください．事前準備の内容については下記の動画で解説していますので，予め閲覧してください（この動画で用いているスライドを添付します．
-
-　http://youtu.be/kePqg8dCgJM
-
-*** aaa
-　この事前準備の内容は大きく次の２つです．
 
 *** インストール作業
 
@@ -50,25 +47,26 @@
   - Vagrant
 
 *** 仮想化環境の設定
+**** 内容
+     - enPiT用に作成したVagrantのboxファイルの入手して
+       実行できるようにする
 
-- enPiT用に作成したVagrantのboxファイルの入手して
-  実行できるようにする
+     - Vagrantのバージョンは最新版にしておく
 
-- Vagrantのバージョンは最新版にしておく
+     - Vagrantのインストール後，次のコマンドでインストール可能
 
-- Vagrantのインストール後，次のコマンドでインストール可能
-
+**** コマンド
 #+begin_src bash
 vagrant init ychubachi/enpit
 #+end_src
 
-　で入手できます．
-
 
 　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
 
-
-* RubyGemsの概要と周辺のツール群
+** 演習課題
+*** 事前準備
+    - =vagrant= で仮想化環境を動かす
+* 第2章 RubyGemsの概要と周辺のツール群
 
    - 初回は開発環境のインストール
      - 開発環境は，enPiT環境を利用する

@@ -1,4 +1,4 @@
-% Created 2014-09-29 月 17:16
+% Created 2014-09-29 月 19:58
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -34,15 +34,17 @@
 
 \maketitle
 
-
-\part{第1章 ガイダンス}
+\part{第1章 開発環境の導入}
 \label{sec-1}
-\section{未整理}
+\section{導入}
 \label{sec-1-1}
 \begin{frame}[label=sec-1-1-1]{自己紹介}
+\begin{itemize}
+\item \href{https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org}{enpit/self\_introduction.org at master · ychubachi/enpit}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-1-2]{仮想化環境利用}
+\begin{frame}[label=sec-1-1-2]{仮想化環境の導入}
 \begin{itemize}
 \item Rubyの開発環境
 \begin{itemize}
@@ -50,7 +52,14 @@
 \end{itemize}
 \item インストールの方法
 \begin{itemize}
+\item 資料
+\begin{itemize}
+\item \href{https://github.com/ychubachi/enpit/blob/master/slides/preparation.org}{enpit/preparation.org at master · ychubachi/enpit}
+\end{itemize}
 \item 動画を参照
+\begin{itemize}
+\item \url{http://youtu.be/kePqg8dCgJM}
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -60,17 +69,10 @@
 \item スケジュール
 Gitの使い方を先にやる
 \end{itemize}
-
-　授業の開始前に事前準備を行っておいてください．事前準備の内容については下記の動画で解説していますので，予め閲覧してください（この動画で用いているスライドを添付します．
-
-　\url{http://youtu.be/kePqg8dCgJM}
 \end{frame}
 
-\begin{frame}[label=sec-1-1-4]{aaa}
-　この事前準備の内容は大きく次の２つです．
-\end{frame}
 
-\begin{frame}[label=sec-1-1-5]{インストール作業}
+\begin{frame}[label=sec-1-1-4]{インストール作業}
 \begin{itemize}
 \item 演習は各自のノートPCで実施する
 \item 予め次のソフトウエアのインストールをする
@@ -81,8 +83,9 @@ Gitの使い方を先にやる
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile,label=sec-1-1-6]{仮想化環境の設定}
- \begin{itemize}
+\begin{frame}[fragile,label=sec-1-1-5]{仮想化環境の設定}
+ \begin{block}{内容}
+\begin{itemize}
 \item enPiT用に作成したVagrantのboxファイルの入手して
 実行できるようにする
 
@@ -90,19 +93,26 @@ Gitの使い方を先にやる
 
 \item Vagrantのインストール後，次のコマンドでインストール可能
 \end{itemize}
+\end{block}
 
+\begin{block}{コマンド}
 \begin{minted}[]{bash}
 vagrant init ychubachi/enpit
 \end{minted}
 
-　で入手できます．
-
 
 　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
+\end{block}
 \end{frame}
 
-
-\part{RubyGemsの概要と周辺のツール群}
+\section{演習課題}
+\label{sec-1-2}
+\begin{frame}[fragile,label=sec-1-2-1]{事前準備}
+ \begin{itemize}
+\item \texttt{vagrant} で仮想化環境を動かす
+\end{itemize}
+\end{frame}
+\part{第2章 RubyGemsの概要と周辺のツール群}
 \label{sec-2}
 
 \begin{itemize}
