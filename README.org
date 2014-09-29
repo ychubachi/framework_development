@@ -1,2 +1,3 @@
 * フレームワーク開発特論
-  授業資料等．
+  - 授業資料等．
+  - [[http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf][シラバス]]
