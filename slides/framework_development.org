@@ -1,5 +1,9 @@
 #+STARTUP: latexpreview
 
+#+LATEX_CLASS: beamer_lecture
+#+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
+# #+LaTeX_CLASS_OPTIONS: [t]
+
 #+TITLE: フレームワーク開発特論
 #+AUTHOR: 中鉢 欣秀
 #+DATE: 
