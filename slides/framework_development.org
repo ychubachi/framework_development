@@ -1,0 +1,88 @@
+#+STARTUP: latexpreview
+
+#+LATEX_CLASS: beamer_lecture
+#+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
+# #+LaTeX_CLASS_OPTIONS: [t]
+
+#+OPTIONS: H:3		# Frameのレベル
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+#+OPTIONS: *:t
+
+# #+BEAMER_THEME: Madrid
+#+BEAMER_THEME: Berkeley
+# #+BEAMER_COLOR_THEME: spruce
+#+BEAMER_COLOR_THEME: seahorse
+#+BEAMER_INNER_THEME: rectangles
+
+#+TITLE: フレームワーク開発特論
+#+AUTHOR: 中鉢 欣秀
+#+DATE: 
+
+#+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
+
+* 第1章 ガイダンス
+** 未整理
+*** 自己紹介
+
+*** 仮想化環境利用
+  - Rubyの開発環境
+    - enPiTの仮想環境を利用
+  - インストールの方法
+    - 動画を参照
+
+*** スケジュール
+  - スケジュール
+    Gitの使い方を先にやる
+
+　授業の開始前に事前準備を行っておいてください．事前準備の内容については下記の動画で解説していますので，予め閲覧してください（この動画で用いているスライドを添付します．
+
+　http://youtu.be/kePqg8dCgJM
+
+*** aaa
+　この事前準備の内容は大きく次の２つです．
+
+*** インストール作業
+
+- 演習は各自のノートPCで実施する
+- 予め次のソフトウエアのインストールをする
+  - VirtualBox
+  - Vagrant
+
+2) 仮想化環境の設定
+
+　enPiT用に作成したVagrantのboxファイルの入手して実行できるようにしておきます（なお，このboxファイルは授業開始前までに更新される可能性があります）．
+
+※既にVagrantの設定がお済みの方は，
+    vagrant init ychubachi/enpit
+　で入手できます．
+
+
+　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
+
+
+* RubyGemsの概要と周辺のツール群
+
+   - 初回は開発環境のインストール
+     - 開発環境は，enPiT環境を利用する
+   - コンポーネントとGemの関係
+     - 他の言語だとどうなるか？
+   - 簡単なgemをダウンロードして中身を見てみる
+   - Gitの使い方
+     - Gemを作るのに，gitは必須
+     - bundle gem hoge すると gitのレポジトリができるので
+   - 演習
+     - Gemを生成する
+       - 生成された内容を調べる
+       - Rakeの使い方
+     - その後，テストの話をする
+
+* Rubyによる単体テスト
+
+* Rubyによる統合テスト
+
+* GitHubによるコードの共有
+
+* CIツールによるテスト自動化
+
+* まとめ

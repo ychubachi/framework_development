@@ -1,0 +1,10 @@
+*.aux
+*.fdb_latexmk
+*.html
+*.log
+*.nav
+*.out
+*.pyg
+*.snm
+*.toc
+*.vrb

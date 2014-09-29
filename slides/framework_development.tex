@@ -1,0 +1,110 @@
+% Created 2014-09-29 月 16:36
+\documentclass[t, aspectratio=169]{beamer}
+\usepackage{zxjatype}
+\usepackage[ipa]{zxjafont}
+\setbeamertemplate{navigation symbols}{}
+\hypersetup{colorlinks,linkcolor=,urlcolor=gray}
+\AtBeginPart
+{
+  \begin{frame}<beamer|handout>
+    \date{\insertpart}
+    \maketitle
+  \end{frame}
+}
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+  \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\usepackage{minted}
+\institute[AIIT]{産業技術大学院大学(AIIT)}
+\usetheme{Berkeley}
+\usecolortheme{seahorse}
+\useinnertheme{rectangles}
+\author{中鉢 欣秀}
+\date{}
+\title{フレームワーク開発特論}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.6)}}
+\begin{document}
+
+\maketitle
+
+
+\part{第1章 ガイダンス}
+\label{sec-1}
+\section{未整理}
+\label{sec-1-1}
+\begin{frame}[label=sec-1-1-1]{自己紹介}
+\end{frame}
+
+\begin{frame}[label=sec-1-1-2]{仮想化環境利用}
+\begin{itemize}
+\item Rubyの開発環境
+\begin{itemize}
+\item enPiTの仮想環境を利用
+\end{itemize}
+\item インストールの方法
+\begin{itemize}
+\item 動画を参照
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-1-3]{スケジュール}
+\begin{itemize}
+\item スケジュール
+Gitの使い方を先にやる
+\end{itemize}
+\end{frame}
+
+
+\part{RubyGemsの概要と周辺のツール群}
+\label{sec-2}
+
+\begin{itemize}
+\item 初回は開発環境のインストール
+\begin{itemize}
+\item 開発環境は，enPiT環境を利用する
+\end{itemize}
+\item コンポーネントとGemの関係
+\begin{itemize}
+\item 他の言語だとどうなるか？
+\end{itemize}
+\item 簡単なgemをダウンロードして中身を見てみる
+\item Gitの使い方
+\begin{itemize}
+\item Gemを作るのに，gitは必須
+\item bundle gem hoge すると gitのレポジトリができるので
+\end{itemize}
+\item 演習
+\begin{itemize}
+\item Gemを生成する
+\begin{itemize}
+\item 生成された内容を調べる
+\item Rakeの使い方
+\end{itemize}
+\item その後，テストの話をする
+\end{itemize}
+\end{itemize}
+
+\part{Rubyによる単体テスト}
+\label{sec-3}
+
+\part{Rubyによる統合テスト}
+\label{sec-4}
+
+\part{GitHubによるコードの共有}
+\label{sec-5}
+
+\part{CIツールによるテスト自動化}
+\label{sec-6}
+
+\part{まとめ}
+\label{sec-7}
+% Emacs 24.3.1 (Org mode 8.2.6)
+\end{document}
