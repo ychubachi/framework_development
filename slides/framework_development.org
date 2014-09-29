@@ -1,5 +1,10 @@
 #+STARTUP: latexpreview
 
+#+OPTIONS: H:3		# Frameのレベル
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+#+OPTIONS: *:t
+
 #+LATEX_CLASS: beamer_lecture
 #+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
 # #+LaTeX_CLASS_OPTIONS: [t]
