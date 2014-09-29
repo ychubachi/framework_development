@@ -1,3 +1,9 @@
+#+TITLE: フレームワーク開発特論
+#+AUTHOR: 中鉢 欣秀
+#+DATE: 
+
+#+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
+
 * 第1章 ガイダンス
 ** 未整理
 *** 自己紹介
