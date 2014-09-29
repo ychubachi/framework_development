@@ -49,12 +49,19 @@
   - VirtualBox
   - Vagrant
 
-2) 仮想化環境の設定
+*** 仮想化環境の設定
 
-　enPiT用に作成したVagrantのboxファイルの入手して実行できるようにしておきます（なお，このboxファイルは授業開始前までに更新される可能性があります）．
+- enPiT用に作成したVagrantのboxファイルの入手して
+  実行できるようにする
 
-※既にVagrantの設定がお済みの方は，
-    vagrant init ychubachi/enpit
+- Vagrantのバージョンは最新版にしておく
+
+- Vagrantのインストール後，次のコマンドでインストール可能
+
+#+begin_src bash
+vagrant init ychubachi/enpit
+#+end_src
+
 　で入手できます．
 
 
