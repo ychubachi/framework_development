@@ -1,4 +1,4 @@
-% Created 2014-09-29 月 16:36
+% Created 2014-09-29 月 17:16
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -60,6 +60,45 @@
 \item スケジュール
 Gitの使い方を先にやる
 \end{itemize}
+
+　授業の開始前に事前準備を行っておいてください．事前準備の内容については下記の動画で解説していますので，予め閲覧してください（この動画で用いているスライドを添付します．
+
+　\url{http://youtu.be/kePqg8dCgJM}
+\end{frame}
+
+\begin{frame}[label=sec-1-1-4]{aaa}
+　この事前準備の内容は大きく次の２つです．
+\end{frame}
+
+\begin{frame}[label=sec-1-1-5]{インストール作業}
+\begin{itemize}
+\item 演習は各自のノートPCで実施する
+\item 予め次のソフトウエアのインストールをする
+\begin{itemize}
+\item VirtualBox
+\item Vagrant
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-1-1-6]{仮想化環境の設定}
+ \begin{itemize}
+\item enPiT用に作成したVagrantのboxファイルの入手して
+実行できるようにする
+
+\item Vagrantのバージョンは最新版にしておく
+
+\item Vagrantのインストール後，次のコマンドでインストール可能
+\end{itemize}
+
+\begin{minted}[]{bash}
+vagrant init ychubachi/enpit
+\end{minted}
+
+　で入手できます．
+
+
+　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
 \end{frame}
 
 
