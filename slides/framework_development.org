@@ -1,6 +1,6 @@
 #+STARTUP: latexpreview
 
-#+OPTIONS: H:3		# Frameのレベル
+#+OPTIONS: H:3
 
 # #+BEAMER_THEME: Madrid
 #+BEAMER_THEME: Berkeley
