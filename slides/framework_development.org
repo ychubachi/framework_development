@@ -1,3 +1,5 @@
+#+STARTUP: latexpreview
+
 #+TITLE: フレームワーク開発特論
 #+AUTHOR: 中鉢 欣秀
 #+DATE: 
