@@ -1,26 +1,3 @@
-#+STARTUP: latexpreview
-
-#+LATEX_CLASS: beamer_lecture
-#+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
-# #+LaTeX_CLASS_OPTIONS: [t]
-
-#+OPTIONS: H:3		# Frameのレベル
-#+OPTIONS: toc:nil
-#+OPTIONS: ^:nil
-#+OPTIONS: *:t
-
-# #+BEAMER_THEME: Madrid
-#+BEAMER_THEME: Berkeley
-# #+BEAMER_COLOR_THEME: spruce
-#+BEAMER_COLOR_THEME: seahorse
-#+BEAMER_INNER_THEME: rectangles
-
-#+TITLE: フレームワーク開発特論
-#+AUTHOR: 中鉢 欣秀
-#+DATE: 
-
-#+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
-
 * 第1章 ガイダンス
 ** 未整理
 *** 自己紹介
