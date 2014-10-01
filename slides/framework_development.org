@@ -5,9 +5,7 @@
 #+OPTIONS: ^:nil
 #+OPTIONS: *:t
 
-# #+BEAMER_THEME: Madrid
 #+BEAMER_THEME: Berkeley
-# #+BEAMER_COLOR_THEME: spruce
 #+BEAMER_COLOR_THEME: seahorse
 #+BEAMER_INNER_THEME: rectangles
 
@@ -63,6 +61,8 @@ vagrant init ychubachi/enpit
 
 　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
 
+*** Memo
+    - メジャーなGemのコードをみてみる
 ** 演習課題
 *** 事前準備
     - =vagrant= で仮想化環境を動かす
@@ -83,6 +83,8 @@ vagrant init ychubachi/enpit
      - その後，テストの話をする
 
 * Rubyによる単体テスト
+*** Memo
+    - 簡単なコードでテストを通す
 
 * Rubyによる統合テスト
 
@@ -91,3 +93,5 @@ vagrant init ychubachi/enpit
 * CIツールによるテスト自動化
 
 * まとめ
+* Memo
+  - [[http://atodekaku.tumblr.com/post/33835003602/gem-2012-10-14-sun][デザイナーの為のgem作成勉強会に参加しました = 2012.10.14.Sun • FIXME]]
