@@ -1,7 +1,7 @@
 #+STARTUP: latexpreview
 
 #+OPTIONS: H:3
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:t
 #+OPTIONS: ^:nil
 #+OPTIONS: *:t
 
@@ -18,7 +18,7 @@
 
 #+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
 
-* 第1章 開発環境の導入
+* 第1章 この授業について
 ** 導入
 *** はじめに
 **** 自己紹介
@@ -47,11 +47,13 @@
     - RubyGemsに公開する方法
 
 ** 授業の方法
-*** 英語の原典を読む
+*** この授業で用いる資料
     - この授業で取り上げる資料は，開発コミュニティが公開している
       Webページを中心に適宜紹介する
     - エンジニアは英語の原典を読めなくてはならないので，英語のページ
       を見ながら解説する
+    - スライド・ハンドアウトは適宜更新するので，
+      必要に応じてダウンロードすること
 
 *** Git/GitHubの活用
     - GitHubのアカウントを作成しておくこと
@@ -80,12 +82,23 @@
 vagrant init ychubachi/enpit
 #+end_src
 
-*** Memo
-    - メジャーなGemのコードをみてみる
+** RubyのGemとは
+*** Rubyによるコンポーネント
+    - Rubyには，再利用可能なコンポーネントを
+      取り扱う仕組みとしてGemがある
+    - 資料
+      - [[http://guides.rubygems.org/][RubyGems Guides]]
+*** 基本的なコマンド
+    - =gem= コマンドは，Rubyでコンポーネントを開発したり，
+      配布をしたりする等の際に利用するコマンド
+    - 後に解説する =bundler= コマンドの基盤
+    - 資料
+      - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
 ** 演習課題
 *** 課題1-1
 **** 開発環境の構築
      - 演習用仮想化環境を用意する
+     - 資料と動画を参照
 **** 作業内容
      - VirtualBox と Vagrantをインストールする
        - [[https://www.virtualbox.org/][Oracle VM VirtualBox]]
@@ -98,23 +111,43 @@ vagrant init ychubachi/enpit
 #+begin_src bash
 vagrant init ychubachi/enpit
 vagrant up
+vagrant ssh
 #+end_src
 
-* COMMENT 第2章 RubyGemsの概要と周辺のツール群
+*** 課題1-3
+**** RubyGems Basics
+     - 下記のガイドに記されたサンプルを実行し，
+       =gem= コマンドの基本的な使い方を学ぶ
+**** ガイド
+     - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
 
-   - 初回は開発環境のインストール
-     - 開発環境は，enPiT環境を利用する
-   - コンポーネントとGemの関係
-     - 他の言語だとどうなるか？
-   - 簡単なgemをダウンロードして中身を見てみる
-   - Gitの使い方
-     - Gemを作るのに，gitは必須
-     - bundle gem hoge すると gitのレポジトリができるので
-   - 演習
-     - Gemを生成する
-       - 生成された内容を調べる
-       - Rakeの使い方
-     - その後，テストの話をする
+* COMMENT 第2章 RubyGemsの概要と周辺のツール群
+  − [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
+  - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
+  - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
+    - C言語拡張
+  - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
+  - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
+  - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
+    - 省略可
+  - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
+
+  - メジャーなGemのコードをみてみる
+    - コンポーネントとGemの関係
+      - 他の言語だとどうなるか？
+  - 演習
+    - 簡単なgemをダウンロードして中身を見てみる
+
+    - Gitの使い方
+      - Gemを作るのに，gitは必須
+
+    - bundleコマンドの解説
+      - bundle gem hoge すると gitのレポジトリができるので
+    - 演習
+      - Gemを生成する
+	- 生成された内容を調べる
+	- Rakeの使い方
+      - その後，テストの話をする
 
 * COMMENT 第3章 Rubyによる単体テスト
 *** Memo

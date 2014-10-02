@@ -1,4 +1,4 @@
-% Created 2014-10-02 木 14:28
+% Created 2014-10-02 木 15:18
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -33,8 +33,12 @@
 \begin{document}
 
 \maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
 
-\part{第1章 開発環境の導入}
+
+\part{第1章 この授業について}
 \label{sec-1}
 \section{導入}
 \label{sec-1-1}
@@ -93,12 +97,14 @@
 \end{frame}
 \section{授業の方法}
 \label{sec-1-3}
-\begin{frame}[label=sec-1-3-1]{英語の原典を読む}
+\begin{frame}[label=sec-1-3-1]{この授業で用いる資料}
 \begin{itemize}
 \item この授業で取り上げる資料は，開発コミュニティが公開している
 Webページを中心に適宜紹介する
 \item エンジニアは英語の原典を読めなくてはならないので，英語のページ
 を見ながら解説する
+\item スライド・ハンドアウトは適宜更新するので，
+必要に応じてダウンロードすること
 \end{itemize}
 \end{frame}
 \begin{frame}[label=sec-1-3-2]{Git/GitHubの活用}
@@ -145,18 +151,38 @@ vagrant init ychubachi/enpit
 \end{minted}
 \end{block}
 \end{frame}
-\begin{frame}[label=sec-1-3-5]{Memo}
+\section{RubyのGemとは}
+\label{sec-1-4}
+\begin{frame}[label=sec-1-4-1]{Rubyによるコンポーネント}
 \begin{itemize}
-\item メジャーなGemのコードをみてみる
+\item Rubyには，再利用可能なコンポーネントを
+取り扱う仕組みとしてGemがある
+\item 資料
+\begin{itemize}
+\item \href{http://guides.rubygems.org/}{RubyGems Guides}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-1-4-2]{基本的なコマンド}
+ \begin{itemize}
+\item \texttt{gem} コマンドは，Rubyでコンポーネントを開発したり，
+配布をしたりする等の際に利用するコマンド
+\item 後に解説する \texttt{bundler} コマンドの基盤
+\item 資料
+\begin{itemize}
+\item \href{http://guides.rubygems.org/rubygems-basics/}{RubyGems Basics - RubyGems Guides}
+\end{itemize}
 \end{itemize}
 \end{frame}
 
 \section{演習課題}
-\label{sec-1-4}
-\begin{frame}[label=sec-1-4-1]{課題1-1}
+\label{sec-1-5}
+\begin{frame}[label=sec-1-5-1]{課題1-1}
 \begin{block}{開発環境の構築}
 \begin{itemize}
 \item 演習用仮想化環境を用意する
+\item 資料と動画を参照
 \end{itemize}
 \end{block}
 
@@ -171,7 +197,7 @@ vagrant init ychubachi/enpit
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label=sec-1-4-2]{課題1-2}
+\begin{frame}[fragile,label=sec-1-5-2]{課題1-2}
  \begin{block}{開発環境の構築}
 \begin{itemize}
 \item enPiT仮想化環境をインストールする
@@ -182,7 +208,22 @@ vagrant init ychubachi/enpit
 \begin{minted}[]{bash}
 vagrant init ychubachi/enpit
 vagrant up
+vagrant ssh
 \end{minted}
+\end{block}
+\end{frame}
+\begin{frame}[fragile,label=sec-1-5-3]{課題1-3}
+ \begin{block}{RubyGems Basics}
+\begin{itemize}
+\item 下記のガイドに記されたサンプルを実行し，
+\texttt{gem} コマンドの基本的な使い方を学ぶ
+\end{itemize}
+\end{block}
+
+\begin{block}{ガイド}
+\begin{itemize}
+\item \href{http://guides.rubygems.org/rubygems-basics/}{RubyGems Basics - RubyGems Guides}
+\end{itemize}
 \end{block}
 \end{frame}
 % Emacs 24.3.2 (Org mode 8.2.5h)
