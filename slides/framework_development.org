@@ -1,7 +1,7 @@
 #+STARTUP: latexpreview
 
 #+OPTIONS: H:3
-#+OPTIONS: toc:t
+#+OPTIONS: toc:nil
 #+OPTIONS: ^:nil
 #+OPTIONS: *:t
 
