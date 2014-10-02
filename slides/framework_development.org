@@ -20,10 +20,44 @@
 
 * 第1章 開発環境の導入
 ** 導入
-*** 自己紹介
-    - [[https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org][enpit/self_introduction.org at master · ychubachi/enpit]]
+*** はじめに
+**** 自己紹介
+     - [[https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org][enpit/self_introduction.org at master · ychubachi/enpit]]
+**** シラバス
+     - [[http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf][フレームワーク開発特論]]
+**** ハンドアウト
+     - [[https://github.com/ychubachi/framework_development/blob/master/slides/framework_development.org][framework_development/framework_development.org at master · ychubachi/framework_development]]
+*** 授業の計画
+**** スケジュールの調整
+     - 基本的にはシラバス通りに行うが，
+       本年度から内容を刷新して新規に行う授業のため
+       計画の変更がありえる
+     - Gitは第9回に予定しているが，前倒しする予定
+**** 休講・補講
+     - 10/9（木） ビデオ視聴（休講）
 
-*** 仮想化環境の導入
+** 学習目的・目標
+*** この授業の目的
+    - 再利用可能なコンポーネント開発の概念的理解を行う
+    - RubyのGemを題材に，実装技術を学ぶ
+*** この授業の目標
+    - Rubyで実際にコーデングを行い，コンポーネントを開発できる
+    - Git/GitHubを用い，開発の効率の向上・成果物の公開などができる
+    - Rubyのテスト技術について学ぶ
+    - RubyGemsに公開する方法
+
+** 授業の方法
+*** 英語の原典を読む
+    - この授業で取り上げる資料は，開発コミュニティが公開している
+      Webページを中心に適宜紹介する
+    - エンジニアは英語の原典を読めなくてはならないので，英語のページ
+      を見ながら解説する
+
+*** Git/GitHubの活用
+    - GitHubのアカウントを作成しておくこと
+    - ソースコードを作成する課題は，GitHubにも登録してもらうことがある
+
+*** 仮想化環境の準備
   - Rubyの開発環境
     - enPiTの仮想環境を利用
   - インストールの方法
@@ -31,26 +65,14 @@
       - [[https://github.com/ychubachi/enpit/blob/master/slides/preparation.org][enpit/preparation.org at master · ychubachi/enpit]]
     - 動画を参照
       - http://youtu.be/kePqg8dCgJM
-
-*** スケジュール
-  - スケジュール
-    Gitの使い方を先にやる
-  - 10/9（木） ビデオ視聴（休講）
-
-*** インストール作業
-
-- 演習は各自のノートPCで実施する
-- 予め次のソフトウエアのインストールをする
-  - VirtualBox
-  - Vagrant
+    - 注意
+      - 動画の視聴及び作業のために2時間程度かかる
 
 *** 仮想化環境の設定
 **** 内容
      - enPiT用に作成したVagrantのboxファイルの入手して
        実行できるようにする
-
      - Vagrantのバージョンは最新版にしておく
-
      - Vagrantのインストール後，次のコマンドでインストール可能
 
 **** コマンド
@@ -58,15 +80,27 @@
 vagrant init ychubachi/enpit
 #+end_src
 
-
-　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
-
 *** Memo
     - メジャーなGemのコードをみてみる
 ** 演習課題
-*** 事前準備
-    - =vagrant= で仮想化環境を動かす
-* 第2章 RubyGemsの概要と周辺のツール群
+*** 課題1-1
+**** 開発環境の構築
+     - 演習用仮想化環境を用意する
+**** 作業内容
+     - VirtualBox と Vagrantをインストールする
+       - [[https://www.virtualbox.org/][Oracle VM VirtualBox]]
+       - [[https://www.vagrantup.com/][Vagrant]]
+*** 課題1-2
+**** 開発環境の構築
+     - enPiT仮想化環境をインストールする
+**** コマンド
+     
+#+begin_src bash
+vagrant init ychubachi/enpit
+vagrant up
+#+end_src
+
+* COMMENT 第2章 RubyGemsの概要と周辺のツール群
 
    - 初回は開発環境のインストール
      - 開発環境は，enPiT環境を利用する
@@ -82,18 +116,18 @@ vagrant init ychubachi/enpit
        - Rakeの使い方
      - その後，テストの話をする
 
-* Rubyによる単体テスト
+* COMMENT 第3章 Rubyによる単体テスト
 *** Memo
     - 簡単なコードでテストを通す
 
-* Rubyによる統合テスト
+* COMMENT 第4章 Rubyによる統合テスト
 
-* GitHubによるコードの共有
+* COMMENT 第5章 GitHubによるコードの共有
 
-* CIツールによるテスト自動化
+* COMMENT 第6章 CIツールによるテスト自動化
 
-* まとめ
-* Memo
+* COMMENT 第7章 まとめ
+* COMMENT Memo
   - [[http://atodekaku.tumblr.com/post/33835003602/gem-2012-10-14-sun][デザイナーの為のgem作成勉強会に参加しました = 2012.10.14.Sun • FIXME]]
   - [[https://rubygems.org/][RubyGems.org | your community gem host]]
   - 魔法などどこにもない！

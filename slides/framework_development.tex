@@ -1,4 +1,4 @@
-% Created 2014-10-01 水 13:51
+% Created 2014-10-02 木 14:28
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -38,12 +38,76 @@
 \label{sec-1}
 \section{導入}
 \label{sec-1-1}
-\begin{frame}[label=sec-1-1-1]{自己紹介}
+\begin{frame}[label=sec-1-1-1]{はじめに}
+\begin{block}{自己紹介}
 \begin{itemize}
 \item \href{https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org}{enpit/self\_introduction.org at master · ychubachi/enpit}
 \end{itemize}
+\end{block}
+
+\begin{block}{シラバス}
+\begin{itemize}
+\item \href{http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf}{フレームワーク開発特論}
+\end{itemize}
+\end{block}
+
+\begin{block}{ハンドアウト}
+\begin{itemize}
+\item \href{https://github.com/ychubachi/framework_development/blob/master/slides/framework_development.org}{framework\_development/framework\_development.org at master · ychubachi/framework\_development}
+\end{itemize}
+\end{block}
 \end{frame}
-\begin{frame}[label=sec-1-1-2]{仮想化環境の導入}
+
+\begin{frame}[label=sec-1-1-2]{授業の計画}
+\begin{block}{スケジュールの調整}
+\begin{itemize}
+\item 基本的にはシラバス通りに行うが，
+本年度から内容を刷新して新規に行う授業のため
+計画の変更がありえる
+\item Gitは第9回に予定しているが，前倒しする予定
+\end{itemize}
+\end{block}
+
+\begin{block}{休講・補講}
+\begin{itemize}
+\item 10/9（木） ビデオ視聴（休講）
+\end{itemize}
+\end{block}
+\end{frame}
+\section{学習目的・目標}
+\label{sec-1-2}
+\begin{frame}[label=sec-1-2-1]{この授業の目的}
+\begin{itemize}
+\item 再利用可能なコンポーネント開発の概念的理解を行う
+\item RubyのGemを題材に，実装技術を学ぶ
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-2-2]{この授業の目標}
+\begin{itemize}
+\item Rubyで実際にコーデングを行い，コンポーネントを開発できる
+\item Git/GitHubを用い，開発の効率の向上・成果物の公開などができる
+\item Rubyのテスト技術について学ぶ
+\item RubyGemsに公開する方法
+\end{itemize}
+\end{frame}
+\section{授業の方法}
+\label{sec-1-3}
+\begin{frame}[label=sec-1-3-1]{英語の原典を読む}
+\begin{itemize}
+\item この授業で取り上げる資料は，開発コミュニティが公開している
+Webページを中心に適宜紹介する
+\item エンジニアは英語の原典を読めなくてはならないので，英語のページ
+を見ながら解説する
+\end{itemize}
+\end{frame}
+\begin{frame}[label=sec-1-3-2]{Git/GitHubの活用}
+\begin{itemize}
+\item GitHubのアカウントを作成しておくこと
+\item ソースコードを作成する課題は，GitHubにも登録してもらうことがある
+\end{itemize}
+\end{frame}
+\begin{frame}[label=sec-1-3-3]{仮想化環境の準備}
 \begin{itemize}
 \item Rubyの開発環境
 \begin{itemize}
@@ -59,34 +123,19 @@
 \begin{itemize}
 \item \url{http://youtu.be/kePqg8dCgJM}
 \end{itemize}
+\item 注意
+\begin{itemize}
+\item 動画の視聴及び作業のために2時間程度かかる
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label=sec-1-1-3]{スケジュール}
-\begin{itemize}
-\item スケジュール
-Gitの使い方を先にやる
-\item 10/9（木） ビデオ視聴（休講）
-\end{itemize}
-\end{frame}
-\begin{frame}[label=sec-1-1-4]{インストール作業}
-\begin{itemize}
-\item 演習は各自のノートPCで実施する
-\item 予め次のソフトウエアのインストールをする
-\begin{itemize}
-\item VirtualBox
-\item Vagrant
-\end{itemize}
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile,label=sec-1-1-5]{仮想化環境の設定}
+\begin{frame}[fragile,label=sec-1-3-4]{仮想化環境の設定}
  \begin{block}{内容}
 \begin{itemize}
 \item enPiT用に作成したVagrantのboxファイルの入手して
 実行できるようにする
-
 \item Vagrantのバージョンは最新版にしておく
-
 \item Vagrantのインストール後，次のコマンドでインストール可能
 \end{itemize}
 \end{block}
@@ -94,75 +143,47 @@ Gitの使い方を先にやる
 \begin{minted}[]{bash}
 vagrant init ychubachi/enpit
 \end{minted}
-
-
-　動画の視聴及び作業のために2時間程度かかると思いますので，時間のあるときに作業をおねがいします．
 \end{block}
 \end{frame}
-\begin{frame}[label=sec-1-1-6]{Memo}
+\begin{frame}[label=sec-1-3-5]{Memo}
 \begin{itemize}
 \item メジャーなGemのコードをみてみる
 \end{itemize}
 \end{frame}
 
 \section{演習課題}
-\label{sec-1-2}
-\begin{frame}[fragile,label=sec-1-2-1]{事前準備}
- \begin{itemize}
-\item \texttt{vagrant} で仮想化環境を動かす
+\label{sec-1-4}
+\begin{frame}[label=sec-1-4-1]{課題1-1}
+\begin{block}{開発環境の構築}
+\begin{itemize}
+\item 演習用仮想化環境を用意する
 \end{itemize}
+\end{block}
+
+\begin{block}{作業内容}
+\begin{itemize}
+\item VirtualBox と Vagrantをインストールする
+\begin{itemize}
+\item \href{https://www.virtualbox.org/}{Oracle VM VirtualBox}
+\item \href{https://www.vagrantup.com/}{Vagrant}
+\end{itemize}
+\end{itemize}
+\end{block}
 \end{frame}
 
-\part{第2章 RubyGemsの概要と周辺のツール群}
-\label{sec-2}
+\begin{frame}[fragile,label=sec-1-4-2]{課題1-2}
+ \begin{block}{開発環境の構築}
+\begin{itemize}
+\item enPiT仮想化環境をインストールする
+\end{itemize}
+\end{block}
 
-\begin{itemize}
-\item 初回は開発環境のインストール
-\begin{itemize}
-\item 開発環境は，enPiT環境を利用する
-\end{itemize}
-\item コンポーネントとGemの関係
-\begin{itemize}
-\item 他の言語だとどうなるか？
-\end{itemize}
-\item 簡単なgemをダウンロードして中身を見てみる
-\item Gitの使い方
-\begin{itemize}
-\item Gemを作るのに，gitは必須
-\item bundle gem hoge すると gitのレポジトリができるので
-\end{itemize}
-\item 演習
-\begin{itemize}
-\item Gemを生成する
-\begin{itemize}
-\item 生成された内容を調べる
-\item Rakeの使い方
-\end{itemize}
-\item その後，テストの話をする
-\end{itemize}
-\end{itemize}
-\part{Rubyによる単体テスト}
-\label{sec-3}
-\begin{frame}[label=sec-3-0-1]{Memo}
-\begin{itemize}
-\item 簡単なコードでテストを通す
-\end{itemize}
+\begin{block}{コマンド}
+\begin{minted}[]{bash}
+vagrant init ychubachi/enpit
+vagrant up
+\end{minted}
+\end{block}
 \end{frame}
-\part{Rubyによる統合テスト}
-\label{sec-4}
-
-\part{GitHubによるコードの共有}
-\label{sec-5}
-
-\part{CIツールによるテスト自動化}
-\label{sec-6}
-
-\part{まとめ}
-\label{sec-7}
-\part{Memo}
-\label{sec-8}
-\begin{itemize}
-\item \href{http://atodekaku.tumblr.com/post/33835003602/gem-2012-10-14-sun}{デザイナーの為のgem作成勉強会に参加しました = 2012.10.14.Sun • FIXME}
-\end{itemize}
 % Emacs 24.3.2 (Org mode 8.2.5h)
 \end{document}
