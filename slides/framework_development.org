@@ -120,34 +120,39 @@ vagrant ssh
        =gem= コマンドの基本的な使い方を学ぶ
 **** ガイド
      - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
+*** 課題1-4
+**** 演習
+     - gemをダウンロードして中身を見てみる
+     - =search=, =fetch= =unpack= などのコマンドを活用する
+* 第2章 RubyGemsの概要と周辺のツール群
+** RubyGemsの解説
+*** Ruby Gemsのガイド
+    - [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
+    - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
+      - C言語拡張（省略）
+    - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
+      - セキュリティ（省略）
+    - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
+** Bundler
+*** Bundlerについて
+    - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
+** 演習課題
+*** 課題2-1
+**** 演習
 
-* COMMENT 第2章 RubyGemsの概要と周辺のツール群
-  − [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
-  - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
-  - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
-    - C言語拡張
-  - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
-  - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
-  - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
-    - 省略可
-  - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
+       - Gitの使い方
+	 - Gemを作るのに，gitは必須
 
-  - メジャーなGemのコードをみてみる
-    - コンポーネントとGemの関係
-      - 他の言語だとどうなるか？
-  - 演習
-    - 簡単なgemをダウンロードして中身を見てみる
-
-    - Gitの使い方
-      - Gemを作るのに，gitは必須
-
-    - bundleコマンドの解説
-      - bundle gem hoge すると gitのレポジトリができるので
-    - 演習
-      - Gemを生成する
-	- 生成された内容を調べる
-	- Rakeの使い方
-      - その後，テストの話をする
+       - bundleコマンドの解説
+	 - bundle gem hoge すると gitのレポジトリができるので
+       - 演習
+	 - Gemを生成する
+	   - 生成された内容を調べる
+	   - Rakeの使い方
+	 - その後，テストの話をする
 
 * COMMENT 第3章 Rubyによる単体テスト
 *** Memo

@@ -1,4 +1,4 @@
-% Created 2014-10-02 木 19:49
+% Created 2014-10-04 土 22:02
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -215,6 +215,68 @@ vagrant ssh
 \begin{block}{ガイド}
 \begin{itemize}
 \item \href{http://guides.rubygems.org/rubygems-basics/}{RubyGems Basics - RubyGems Guides}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[fragile,label=sec-1-5-4]{課題1-4}
+ \begin{block}{演習}
+\begin{itemize}
+\item gemをダウンロードして中身を見てみる
+\item \texttt{search}, \texttt{fetch} \texttt{unpack} などのコマンドを活用する
+\end{itemize}
+\end{block}
+\end{frame}
+\part{第2章 RubyGemsの概要と周辺のツール群}
+\label{sec-2}
+\section{RubyGemsの解説}
+\label{sec-2-1}
+\begin{frame}[label=sec-2-1-1]{Ruby Gemsのガイド}
+\begin{itemize}
+\item \href{http://guides.rubygems.org/what-is-a-gem/}{What is a gem? - RubyGems Guides}
+\item \href{http://guides.rubygems.org/make-your-own-gem/}{Make your own gem - RubyGems Guides}
+\item \href{http://guides.rubygems.org/gems-with-extensions/}{Gems with Extensions - RubyGems Guides}
+\begin{itemize}
+\item C言語拡張（省略）
+\end{itemize}
+\item \href{http://guides.rubygems.org/name-your-gem/}{Name your gem - RubyGems Guides}
+\item \href{http://guides.rubygems.org/publishing/}{Publishing your gem - RubyGems Guides}
+\item \href{http://guides.rubygems.org/security/}{Security - RubyGems Guides}
+\begin{itemize}
+\item セキュリティ（省略）
+\end{itemize}
+\item \href{http://guides.rubygems.org/patterns/}{Patterns - RubyGems Guides}
+\end{itemize}
+\end{frame}
+\section{Bundler}
+\label{sec-2-2}
+\begin{frame}[label=sec-2-2-1]{Bundlerについて}
+\begin{itemize}
+\item \href{http://bundler.io/}{Bundler: The best way to manage a Ruby application's gems}
+\end{itemize}
+\end{frame}
+\section{演習課題}
+\label{sec-2-3}
+\begin{frame}[label=sec-2-3-1]{課題2-1}
+\begin{block}{演習}
+\begin{itemize}
+\item Gitの使い方
+\begin{itemize}
+\item Gemを作るのに，gitは必須
+\end{itemize}
+
+\item bundleコマンドの解説
+\begin{itemize}
+\item bundle gem hoge すると gitのレポジトリができるので
+\end{itemize}
+\item 演習
+\begin{itemize}
+\item Gemを生成する
+\begin{itemize}
+\item 生成された内容を調べる
+\item Rakeの使い方
+\end{itemize}
+\item その後，テストの話をする
+\end{itemize}
 \end{itemize}
 \end{block}
 \end{frame}
