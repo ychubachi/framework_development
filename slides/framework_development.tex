@@ -1,4 +1,4 @@
-% Created 2014-10-04 土 22:02
+% Created 2014-10-14 火 19:12
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -222,13 +222,13 @@ vagrant ssh
  \begin{block}{演習}
 \begin{itemize}
 \item gemをダウンロードして中身を見てみる
-\item \texttt{search}, \texttt{fetch} \texttt{unpack} などのコマンドを活用する
+\item \texttt{search}, \texttt{fetch},  \texttt{unpack} などのコマンドを活用する
 \end{itemize}
 \end{block}
 \end{frame}
 \part{第2章 RubyGemsの概要と周辺のツール群}
 \label{sec-2}
-\section{RubyGemsの解説}
+\section{RubyGemsの解説(1)}
 \label{sec-2-1}
 \begin{frame}[label=sec-2-1-1]{Ruby Gemsのガイド}
 \begin{itemize}
@@ -238,6 +238,12 @@ vagrant ssh
 \begin{itemize}
 \item C言語拡張（省略）
 \end{itemize}
+\end{itemize}
+\end{frame}
+\section{RubyGemsの解説(2)}
+\label{sec-2-2}
+\begin{frame}[label=sec-2-2-1]{Ruby Gemsのガイド}
+\begin{itemize}
 \item \href{http://guides.rubygems.org/name-your-gem/}{Name your gem - RubyGems Guides}
 \item \href{http://guides.rubygems.org/publishing/}{Publishing your gem - RubyGems Guides}
 \item \href{http://guides.rubygems.org/security/}{Security - RubyGems Guides}
@@ -247,35 +253,42 @@ vagrant ssh
 \item \href{http://guides.rubygems.org/patterns/}{Patterns - RubyGems Guides}
 \end{itemize}
 \end{frame}
-\section{Bundler}
-\label{sec-2-2}
-\begin{frame}[label=sec-2-2-1]{Bundlerについて}
-\begin{itemize}
-\item \href{http://bundler.io/}{Bundler: The best way to manage a Ruby application's gems}
-\end{itemize}
-\end{frame}
 \section{演習課題}
 \label{sec-2-3}
 \begin{frame}[label=sec-2-3-1]{課題2-1}
-\begin{block}{演習}
+\begin{block}{RubyGems.orgにアカウントを作成}
 \begin{itemize}
-\item Gitの使い方
+\item RubyGems.orgにアカウントを作成しなさい
+\item \href{https://rubygems.org/}{RubyGems.org | your community gem host}
 \begin{itemize}
-\item Gemを作るのに，gitは必須
+\item 「sign up」リンクから作成する
 \end{itemize}
-
-\item bundleコマンドの解説
-\begin{itemize}
-\item bundle gem hoge すると gitのレポジトリができるので
 \end{itemize}
-\item 演習
+\end{block}
+\end{frame}
+\begin{frame}[label=sec-2-3-2]{課題2-2}
+\begin{block}{ガイドを参考にGemを作る}
 \begin{itemize}
-\item Gemを生成する
+\item ガイドの解説に従い，"hola" Gemを作成しなさい
 \begin{itemize}
-\item 生成された内容を調べる
-\item Rakeの使い方
+\item \href{http://guides.rubygems.org/make-your-own-gem/}{Make your own gem - RubyGems Guides}
 \end{itemize}
-\item その後，テストの話をする
+\item 演習用Gemの名前の付け方
+\begin{itemize}
+\item hola\_(username)
+\item 括弧内はRubyGemsのユーザ名に置き換えよ
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[label=sec-2-3-3]{課題2-3}
+\begin{block}{簡単なGemを作ってみる}
+\begin{itemize}
+\item 内容は簡単な計算を行うものとする
+\begin{itemize}
+\item 生年月日と今の年月日から年齢を計算する
+\item 身長と体重を入力して，BMIを出す
+\item その他
 \end{itemize}
 \end{itemize}
 \end{block}
