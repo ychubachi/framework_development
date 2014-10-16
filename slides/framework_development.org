@@ -144,7 +144,9 @@ vagrant ssh
 ** Bundlerの解説
 *** Bundlerについて
     - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
-
+** 補足
+*** MiniTest
+    - [[http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html][library minitest/unit]]
 ** 演習課題
 *** 課題2-1
 **** RubyGems.orgにアカウントを作成
