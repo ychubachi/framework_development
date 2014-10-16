@@ -136,6 +136,9 @@ vagrant ssh
     - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
       - セキュリティ（省略）
     - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
+** Rbenv
+*** Rbenvについて
+    - [[https://github.com/sstephenson/rbenv][sstephenson/rbenv]]
 ** Bundler
 *** Bundlerについて
     - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
