@@ -123,32 +123,53 @@ vagrant ssh
 *** 課題1-4
 **** 演習
      - gemをダウンロードして中身を見てみる
-     - =search=, =fetch= =unpack= などのコマンドを活用する
+     - =search=, =fetch=,  =unpack= などのコマンドを活用する
 * 第2章 RubyGemsの概要と周辺のツール群
-** RubyGemsの解説
+** RubyGemsの解説(1)
 *** Ruby Gemsのガイド
     - [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
     - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
     - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
       - C言語拡張（省略）
+** RubyGemsの解説(2)
+*** Ruby Gemsのガイド
     - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
     - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
     - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
       - セキュリティ（省略）
     - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
-** Rbenv
+** Rbenvの解説
 *** Rbenvについて
     - [[https://github.com/sstephenson/rbenv][sstephenson/rbenv]]
-** Bundler
+** Bundlerの解説
 *** Bundlerについて
     - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
+
 ** 演習課題
 *** 課題2-1
+**** RubyGems.orgにアカウントを作成
+     - RubyGems.orgにアカウントを作成しなさい
+     - [[https://rubygems.org/][RubyGems.org | your community gem host]]
+       - 「sign up」リンクから作成する
+*** 課題2-2
+**** ガイドを参考にGemを作る
+     - ガイドの解説に従い，"hola" Gemを作成しなさい
+       - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
+     - 演習用Gemの名前の付け方
+       - hola_(username)
+       - 括弧内はRubyGemsのユーザ名に置き換えよ
+*** 課題2-3
+**** 簡単なGemを作ってみる
+     - 内容は簡単な計算を行うものとする
+       - 生年月日と今の年月日から年齢を計算する
+       - 身長と体重を入力して，BMIを出す
+       - その他
+* COMMENT Memo
+** 演習課題
 **** 演習
-
        - Gitの使い方
 	 - Gemを作るのに，gitは必須
-
+**** 演習
        - bundleコマンドの解説
 	 - bundle gem hoge すると gitのレポジトリができるので
        - 演習
