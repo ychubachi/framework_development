@@ -1,4 +1,4 @@
-% Created 2014-10-21 火 18:20
+% Created 2014-10-21 火 18:51
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -270,8 +270,7 @@ vagrant ssh
 
 \section{演習課題}
 \label{sec-2-4}
-\begin{frame}[label=sec-2-4-1]{課題2-1}
-\begin{block}{RubyGems.orgにアカウントを作成}
+\begin{frame}[label=sec-2-4-1]{課題2-1 RubyGems.orgにアカウントを作成}
 \begin{itemize}
 \item RubyGems.orgにアカウントを作成しなさい
 \item \href{https://rubygems.org/}{RubyGems.org | your community gem host}
@@ -279,11 +278,9 @@ vagrant ssh
 \item 「sign up」リンクから作成する
 \end{itemize}
 \end{itemize}
-\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-4-2]{課題2-2}
-\begin{block}{ガイドを参考にGemを作る}
+\begin{frame}[label=sec-2-4-2]{課題2-2 ガイドを参考にGemを作る}
 \begin{itemize}
 \item ガイドの解説に従い，"hola" Gemを作成しなさい
 \begin{itemize}
@@ -295,10 +292,6 @@ vagrant ssh
 \item 括弧内はRubyGemsのユーザ名に置き換えよ
 \end{itemize}
 \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label=sec-2-4-3]{課題2-3}
 \end{frame}
 
 \part{第3章 Ruby自体のバージョン管理}
@@ -349,6 +342,20 @@ vagrant ssh
 \end{block}
 \end{frame}
 
+\section{演習課題}
+\label{sec-3-2}
+\begin{frame}[fragile,label=sec-3-2-1]{課題3-1 別なRubyバージョンのインストール}
+ \begin{itemize}
+\item \texttt{rbenv} を用いて，異なるバージョンのRubyをインストールする
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-3-2-2]{課題3-2 Rubyのバージョンを切り替える}
+ \begin{itemize}
+\item \texttt{rbenv} を用い，=ruby= のバージョンを切り替える
+\end{itemize}
+\end{frame}
+
 \part{第4章 プロジェクトで利用するGemの管理}
 \label{sec-4}
 \section{プロジェクトとGem}
@@ -375,12 +382,21 @@ Gemのバージョンについても注意が必要である
 \begin{itemize}
 \item \href{http://bundler.io/rationale.html}{Why Bundler exists}
 \item \href{https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs}{Understanding binstubs · sstephenson/rbenv Wiki}
+\item \href{http://bundler.io/gemfile.html}{Gemfile}
+\end{itemize}
+\end{frame}
+
+\section{BundlerによるGemの作成}
+\label{sec-4-3}
+\begin{frame}[label=sec-4-3-1]{ひな形の自動生成}
+\begin{itemize}
+\item \href{http://bundler.io/v1.7/bundle_gem.html}{Bundler: The best way to manage a Ruby application's gems}
 \end{itemize}
 \end{frame}
 
 \section{演習課題}
-\label{sec-4-3}
-\begin{block}{4-1 Bundlerで簡単なGemを作ってみる}
+\label{sec-4-4}
+\begin{frame}[label=sec-4-4-1]{4-1 Bundlerで簡単なGemを作ってみる}
 \begin{itemize}
 \item 内容は簡単な計算を行うものとする
 \begin{itemize}
@@ -389,6 +405,6 @@ Gemのバージョンについても注意が必要である
 \item その他
 \end{itemize}
 \end{itemize}
-\end{block}
+\end{frame}
 % Emacs 24.3.1 (Org mode 8.2.5h)
 \end{document}
