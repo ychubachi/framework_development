@@ -138,12 +138,6 @@ vagrant ssh
     - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
       - セキュリティ（省略）
     - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
-** Rbenvの解説
-*** Rbenvについて
-    - [[https://github.com/sstephenson/rbenv][sstephenson/rbenv]]
-** Bundlerの解説
-*** Bundlerについて
-    - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
 ** 補足
 *** MiniTest
     - [[http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html][library minitest/unit]]
@@ -161,7 +155,45 @@ vagrant ssh
        - hola_(username)
        - 括弧内はRubyGemsのユーザ名に置き換えよ
 *** 課題2-3
-**** 簡単なGemを作ってみる
+* 第3章 Ruby自体のバージョン管理
+** Rbenvの解説
+*** Rubyのバージョン
+     - Rubyには様々なバージョンがある
+       - 最新の安定版: Ruby 2.1.3
+       - 前世代の安定版: Ruby 2.0.0-p576
+       - 古い安定版: Ruby 1.9.3-p547
+       - 1.8.7，1.9.2はサポート終了
+     - これら以外にも，Javaや.NET Framework上で動作するものなど多数．
+*** 開発時の混乱
+    - 開発プロジェクトによって，異なるバージョンのRubyが用いられる
+    - 複数の開発プロジェクトに参加する開発者が，
+      毎回手動でバージョンを変更するのは困難であるし，
+      トラブルの原因となる
+*** Rbenvについて
+**** 概要
+     - バージョンの異なる複数のRubyを管理するツールであり，
+       主要なエコシステムの一部
+     - プラグインを追加することで，インストールも自動化できる
+**** GitHub
+    - [[https://github.com/sstephenson/rbenv][sstephenson/rbenv]]
+**** RVMとの比較
+    - [[https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F][Why rbenv? · sstephenson/rbenv Wiki]]
+* 第4章 プロジェクトで利用するGemの管理
+** プロジェクトとGem
+*** プロジェクトごとに異なるGemの集合
+    - 開発プロジェクトにおいて利用するGemは異なるばかりではなく，
+      Gemのバージョンについても注意が必要である
+    - Gemコマンドを直接用いてインストールする方法では，
+      必要なGemを主導で管理しなくてはならないし，
+      バージョンの異なるGemを用いる場合もある
+** Bundlerの解説
+*** Bundlerについて
+    - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
+*** ドキュメントの解説
+    - [[http://bundler.io/rationale.html][Why Bundler exists]]
+    - [[https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs][Understanding binstubs · sstephenson/rbenv Wiki]]
+** 演習課題
+**** 4-1 Bundlerで簡単なGemを作ってみる
      - 内容は簡単な計算を行うものとする
        - 生年月日と今の年月日から年齢を計算する
        - 身長と体重を入力して，BMIを出す
