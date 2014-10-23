@@ -200,18 +200,26 @@ vagrant ssh
     - [[http://bundler.io/v1.7/bundle_gem.html][Bundler: The best way to manage a Ruby application's gems]]
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
-     - 内容は簡単な計算を行うものとする
-       - 生年月日と今の年月日から年齢を計算する
-       - 身長と体重を入力して，BMIを出す
-       - その他
+**** 課題
+     - 簡単な計算を行うコマンドをGemとして作成しなさい．
+**** 例
+     - 生年月日と今の年月日から年齢を計算する
+     - 身長と体重を入力して，BMIを出す
+     - その他，各自で考えよ
+*** 4-2 作成したGemをGitHubで公開する
+**** 課題
+    - 作成したGemのソースコードをGitHubに公開しなさい
+      - =git add= ， =git commit= でコミット
+      - =hub create= でGitHubのリポジトリを作成
+      - =git push origin master= でGitHubに登録
+**** 提出
+    - GitHubのURLをLMSに提出する
+* COMMENT 第5章 Rake
+*** Rake
+    - [[https://github.com/jimweirich/rake][jimweirich/rake]]
 * COMMENT Memo
 ** 演習課題
 **** 演習
-       - Gitの使い方
-	 - Gemを作るのに，gitは必須
-**** 演習
-       - bundleコマンドの解説
-	 - bundle gem hoge すると gitのレポジトリができるので
        - 演習
 	 - Gemを生成する
 	   - 生成された内容を調べる
@@ -223,11 +231,8 @@ vagrant ssh
     - 簡単なコードでテストを通す
 
 * COMMENT 第4章 Rubyによる統合テスト
-
 * COMMENT 第5章 GitHubによるコードの共有
-
 * COMMENT 第6章 CIツールによるテスト自動化
-
 * COMMENT 第7章 まとめ
 * COMMENT Memo
   - [[http://atodekaku.tumblr.com/post/33835003602/gem-2012-10-14-sun][デザイナーの為のgem作成勉強会に参加しました = 2012.10.14.Sun • FIXME]]
