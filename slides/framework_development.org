@@ -195,6 +195,11 @@ vagrant ssh
     - [[http://bundler.io/rationale.html][Why Bundler exists]]
     - [[https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs][Understanding binstubs · sstephenson/rbenv Wiki]]
     - [[http://bundler.io/gemfile.html][Gemfile]]
+*** インストール
+#+begin_src bash
+gem install bundler
+#+end_src
+    
 ** BundlerによるGemの作成
 *** ひな形の自動生成
     - [[http://bundler.io/v1.7/bundle_gem.html][Bundler: The best way to manage a Ruby application's gems]]
