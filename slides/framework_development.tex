@@ -1,4 +1,4 @@
-% Created 2014-10-21 火 21:30
+% Created 2014-10-28 火 19:07
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -29,7 +29,7 @@
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
-  pdfcreator={Emacs 24.3.1 (Org mode 8.2.6)}}
+  pdfcreator={Emacs 24.3.2 (Org mode 8.2.5h)}}
 \begin{document}
 
 \maketitle
@@ -44,17 +44,20 @@
 \item \href{https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org}{enpit/self\_introduction.org at master · ychubachi/enpit}
 \end{itemize}
 \end{block}
+
 \begin{block}{シラバス}
 \begin{itemize}
 \item \href{http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf}{フレームワーク開発特論}
 \end{itemize}
 \end{block}
+
 \begin{block}{ハンドアウト}
 \begin{itemize}
 \item \href{https://github.com/ychubachi/framework_development/blob/master/slides/framework_development.org}{framework\_development/framework\_development.org at master · ychubachi/framework\_development}
 \end{itemize}
 \end{block}
 \end{frame}
+
 \begin{frame}[label=sec-1-1-2]{授業の計画}
 \begin{block}{スケジュールの調整}
 \begin{itemize}
@@ -63,13 +66,13 @@
 計画の変更がありえる
 \end{itemize}
 \end{block}
+
 \begin{block}{休講・補講}
 \begin{itemize}
 \item 10/9（木） ビデオ視聴（休講）
 \end{itemize}
 \end{block}
 \end{frame}
-
 \section{学習目的・目標}
 \label{sec-1-2}
 \begin{frame}[label=sec-1-2-1]{この授業の目的}
@@ -78,6 +81,7 @@
 \item RubyのGemを題材に，実装技術を学ぶ
 \end{itemize}
 \end{frame}
+
 \begin{frame}[label=sec-1-2-2]{この授業の目標}
 \begin{itemize}
 \item Rubyで実際にコーデングを行い，コンポーネントを開発できる
@@ -86,7 +90,6 @@
 \item RubyGemsに公開する方法
 \end{itemize}
 \end{frame}
-
 \section{授業の方法}
 \label{sec-1-3}
 \begin{frame}[label=sec-1-3-1]{この授業で用いる資料}
@@ -99,14 +102,12 @@ Webページを中心に適宜紹介する
 必要に応じてダウンロードすること
 \end{itemize}
 \end{frame}
-
 \begin{frame}[label=sec-1-3-2]{Git/GitHubの活用}
 \begin{itemize}
 \item GitHubのアカウントを作成しておくこと
 \item ソースコードを作成する課題は，GitHubにも登録してもらうことがある
 \end{itemize}
 \end{frame}
-
 \begin{frame}[label=sec-1-3-3]{仮想化環境の準備}
 \begin{itemize}
 \item Rubyの開発環境
@@ -130,7 +131,6 @@ Webページを中心に適宜紹介する
 \end{itemize}
 \end{itemize}
 \end{frame}
-
 \begin{frame}[fragile,label=sec-1-3-4]{仮想化環境の設定}
  \begin{block}{内容}
 \begin{itemize}
@@ -140,14 +140,12 @@ Webページを中心に適宜紹介する
 \item Vagrantのインストール後，次のコマンドでインストール可能
 \end{itemize}
 \end{block}
-
 \begin{block}{コマンド}
 \begin{minted}[]{bash}
 vagrant init ychubachi/enpit
 \end{minted}
 \end{block}
 \end{frame}
-
 \section{RubyのGemとは}
 \label{sec-1-4}
 \begin{frame}[label=sec-1-4-1]{Rubyによるコンポーネント}
@@ -160,6 +158,7 @@ vagrant init ychubachi/enpit
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile,label=sec-1-4-2]{基本的なコマンド}
  \begin{itemize}
 \item \texttt{gem} コマンドは，Rubyでコンポーネントを開発したり，
@@ -171,6 +170,7 @@ vagrant init ychubachi/enpit
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \section{演習課題}
 \label{sec-1-5}
 \begin{frame}[label=sec-1-5-1]{課題1-1}
@@ -180,6 +180,7 @@ vagrant init ychubachi/enpit
 \item 資料と動画を参照
 \end{itemize}
 \end{block}
+
 \begin{block}{作業内容}
 \begin{itemize}
 \item VirtualBox と Vagrantをインストールする
@@ -190,12 +191,14 @@ vagrant init ychubachi/enpit
 \end{itemize}
 \end{block}
 \end{frame}
+
 \begin{frame}[fragile,label=sec-1-5-2]{課題1-2}
  \begin{block}{開発環境の構築}
 \begin{itemize}
 \item enPiT仮想化環境をインストールする
 \end{itemize}
 \end{block}
+
 \begin{block}{コマンド}
 \begin{minted}[]{bash}
 vagrant init ychubachi/enpit
@@ -204,7 +207,6 @@ vagrant ssh
 \end{minted}
 \end{block}
 \end{frame}
-
 \begin{frame}[fragile,label=sec-1-5-3]{課題1-3}
  \begin{block}{RubyGems Basics}
 \begin{itemize}
@@ -212,12 +214,14 @@ vagrant ssh
 \texttt{gem} コマンドの基本的な使い方を学ぶ
 \end{itemize}
 \end{block}
+
 \begin{block}{ガイド}
 \begin{itemize}
 \item \href{http://guides.rubygems.org/rubygems-basics/}{RubyGems Basics - RubyGems Guides}
 \end{itemize}
 \end{block}
 \end{frame}
+
 \begin{frame}[fragile,label=sec-1-5-4]{課題1-4}
  \begin{block}{演習}
 \begin{itemize}
@@ -226,6 +230,7 @@ vagrant ssh
 \end{itemize}
 \end{block}
 \end{frame}
+
 \part{第2章 RubyGemsの概要と周辺のツール群}
 \label{sec-2}
 \section{RubyGemsの解説(1)}
@@ -240,6 +245,7 @@ vagrant ssh
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \section{RubyGemsの解説(2)}
 \label{sec-2-2}
 \begin{frame}[label=sec-2-2-1]{Ruby Gemsのガイド}
@@ -253,6 +259,7 @@ vagrant ssh
 \item \href{http://guides.rubygems.org/patterns/}{Patterns - RubyGems Guides}
 \end{itemize}
 \end{frame}
+
 \section{補足}
 \label{sec-2-3}
 \begin{frame}[label=sec-2-3-1]{MiniTest}
@@ -260,6 +267,7 @@ vagrant ssh
 \item \href{http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html}{library minitest/unit}
 \end{itemize}
 \end{frame}
+
 \section{演習課題}
 \label{sec-2-4}
 \begin{frame}[label=sec-2-4-1]{課題2-1 RubyGems.orgにアカウントを作成}
@@ -271,6 +279,7 @@ vagrant ssh
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \begin{frame}[label=sec-2-4-2]{課題2-2 ガイドを参考にGemを作る}
 \begin{itemize}
 \item ガイドの解説に従い，"hola" Gemを作成しなさい
@@ -284,6 +293,7 @@ vagrant ssh
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \part{第3章 Ruby自体のバージョン管理}
 \label{sec-3}
 \section{Rbenvの解説}
@@ -300,6 +310,7 @@ vagrant ssh
 \item これら以外にも，Javaや.NET Framework上で動作するものなど多数．
 \end{itemize}
 \end{frame}
+
 \begin{frame}[label=sec-3-1-2]{開発時の混乱}
 \begin{itemize}
 \item 開発プロジェクトによって，異なるバージョンのRubyが用いられる
@@ -308,6 +319,7 @@ vagrant ssh
 トラブルの原因となる
 \end{itemize}
 \end{frame}
+
 \begin{frame}[label=sec-3-1-3]{Rbenvについて}
 \begin{block}{概要}
 \begin{itemize}
@@ -316,17 +328,20 @@ vagrant ssh
 \item プラグインを追加することで，インストールも自動化できる
 \end{itemize}
 \end{block}
+
 \begin{block}{GitHub}
 \begin{itemize}
 \item \href{https://github.com/sstephenson/rbenv}{sstephenson/rbenv}
 \end{itemize}
 \end{block}
+
 \begin{block}{RVMとの比較}
 \begin{itemize}
 \item \href{https://github.com/sstephenson/rbenv/wiki/Why-rbenv\%3F}{Why rbenv? · sstephenson/rbenv Wiki}
 \end{itemize}
 \end{block}
 \end{frame}
+
 \section{演習課題}
 \label{sec-3-2}
 \begin{frame}[fragile,label=sec-3-2-1]{課題3-1 別なRubyバージョンのインストール}
@@ -334,11 +349,13 @@ vagrant ssh
 \item \texttt{rbenv} を用いて，異なるバージョンのRubyをインストールする
 \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile,label=sec-3-2-2]{課題3-2 Rubyのバージョンを切り替える}
  \begin{itemize}
 \item \texttt{rbenv} を用い，=ruby= のバージョンを切り替える
 \end{itemize}
 \end{frame}
+
 \part{第4章 プロジェクトで利用するGemの管理}
 \label{sec-4}
 \section{プロジェクトとGem}
@@ -352,6 +369,7 @@ Gemのバージョンについても注意が必要である
 バージョンの異なるGemを用いる場合もある
 \end{itemize}
 \end{frame}
+
 \section{Bundlerの解説}
 \label{sec-4-2}
 \begin{frame}[label=sec-4-2-1]{Bundlerについて}
@@ -359,6 +377,7 @@ Gemのバージョンについても注意が必要である
 \item \href{http://bundler.io/}{Bundler: The best way to manage a Ruby application's gems}
 \end{itemize}
 \end{frame}
+
 \begin{frame}[label=sec-4-2-2]{ドキュメントの解説}
 \begin{itemize}
 \item \href{http://bundler.io/rationale.html}{Why Bundler exists}
@@ -366,30 +385,125 @@ Gemのバージョンについても注意が必要である
 \item \href{http://bundler.io/gemfile.html}{Gemfile}
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile,label=sec-4-2-3]{インストール}
- \begin{minted}[]{bash}
+
+\begin{frame}[fragile,label=sec-4-2-3]{bundleコマンドのインストール}
+ \begin{block}{bundleコマンド}
+\begin{itemize}
+\item \texttt{gem} と違い， \texttt{bundle} コマンドは標準ではインストールされていない．
+\end{itemize}
+\end{block}
+
+\begin{block}{Gemによるインストール方法}
+\begin{minted}[]{bash}
 gem install bundler
 \end{minted}
+\end{block}
 \end{frame}
-
 \section{BundlerによるGemの作成}
 \label{sec-4-3}
-\begin{frame}[label=sec-4-3-1]{ひな形の自動生成}
+\begin{frame}[fragile,label=sec-4-3-1]{ひな形の自動生成}
+ \begin{block}{ひな形の自動生成}
 \begin{itemize}
 \item \href{http://bundler.io/v1.7/bundle_gem.html}{Bundler: The best way to manage a Ruby application's gems}
+\end{itemize}
+\end{block}
+
+\begin{block}{コマンド}
+\begin{minted}[]{bash}
+bundle gem my_gem_name
+\end{minted}
+\end{block}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-2]{雛形の内容}
+ \begin{minted}[]{text}
+.
+├── .git
+  <snip>
+├── .gitignore
+├── Gemfile
+├── LICENSE.txt
+├── README.md
+├── Rakefile
+├── lib
+│   ├── my_gem_name
+│   │   └── version.rb
+│   └── my_gem_name.rb
+└── my_gem_name.gemspec
+\end{minted}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-3]{\texttt{git ls-files} について}
+ \begin{itemize}
+\item gitにindexされているファイルの一覧
+\item 新しいファイルは，ステージング領域にaddされると表示に加わる
+\item \texttt{.gitignore} で無視するファイルを設定できる
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-4]{雛形のbuild}
+ \begin{itemize}
+\item \texttt{*.gemspec} のTODOを外す（内容をきちんと書く）
+\item \texttt{rake build} でbuildできる
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-5]{\texttt{executable} の作成と注意}
+ \begin{itemize}
+\item \texttt{bundle gem -b} で実行可能なスクリプトの雛形ができる
+\item 実行属性を \texttt{chmod a+x} でつける
+\item \texttt{bundle install -{}-binstubs} を実行すると，上書きされるので注意
+\begin{itemize}
+\item 手動で他のディレクトリ（ \texttt{/exe} ）に作成するほうが良い
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-6]{Gemfileとgemspecの関係}
+ \begin{itemize}
+\item Gemの依存関係のかき分け
+\begin{itemize}
+\item Gemfile
+\begin{itemize}
+\item \texttt{Gemfile} に \texttt{gemspec} メソッドがあれば， \texttt{.gemspec} 内のGem依存関係を解決する
+\end{itemize}
+\item *.gemspec
+\begin{itemize}
+\item Gemを利用時に必要なGemを追加
+\end{itemize}
+\end{itemize}
 \end{itemize}
 \end{frame}
 \section{演習課題}
 \label{sec-4-4}
 \begin{frame}[label=sec-4-4-1]{4-1 Bundlerで簡単なGemを作ってみる}
+\begin{block}{課題}
 \begin{itemize}
-\item 内容は簡単な計算を行うものとする
+\item 簡単な計算を行うコマンドをGemとして作成しなさい．
+\end{itemize}
+\end{block}
+
+\begin{block}{例}
 \begin{itemize}
 \item 生年月日と今の年月日から年齢を計算する
 \item 身長と体重を入力して，BMIを出す
-\item その他
+\item その他，各自で考えよ
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
-% Emacs 24.3.1 (Org mode 8.2.6)
+
+\begin{frame}[fragile,label=sec-4-4-2]{4-2 作成したGemをGitHubで公開する}
+ \begin{block}{課題}
+\begin{itemize}
+\item 作成したGemのソースコードをGitHubに公開しなさい
+\begin{itemize}
+\item \texttt{git add} ， \texttt{git commit} でコミット
+\item \texttt{hub create} でGitHubのリポジトリを作成
+\item \texttt{git push -u origin master} でGitHubに登録
+\end{itemize}
+\end{itemize}
+\end{block}
+
+\begin{block}{提出}
+\begin{itemize}
+\item GitHubのURLをLMSに提出する
+\end{itemize}
+\end{block}
+\end{frame}
+% Emacs 24.3.2 (Org mode 8.2.5h)
 \end{document}

@@ -195,14 +195,67 @@ vagrant ssh
     - [[http://bundler.io/rationale.html][Why Bundler exists]]
     - [[https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs][Understanding binstubs · sstephenson/rbenv Wiki]]
     - [[http://bundler.io/gemfile.html][Gemfile]]
-*** インストール
+*** bundleコマンドのインストール
+**** bundleコマンド
+     - =gem= と違い， =bundle= コマンドは標準ではインストールされていない．
+**** Gemによるインストール方法
 #+begin_src bash
 gem install bundler
 #+end_src
-    
+
 ** BundlerによるGemの作成
 *** ひな形の自動生成
+**** ひな形の自動生成
     - [[http://bundler.io/v1.7/bundle_gem.html][Bundler: The best way to manage a Ruby application's gems]]
+**** コマンド
+#+begin_src bash
+bundle gem my_gem_name
+#+end_src
+
+*** 雛形の内容
+
+#+begin_src text
+  .
+  ├── .git
+    <snip>
+  ├── .gitignore
+  ├── Gemfile
+  ├── LICENSE.txt
+  ├── README.md
+  ├── Rakefile
+  ├── lib
+  │   ├── my_gem_name
+  │   │   └── version.rb
+  │   └── my_gem_name.rb
+  └── my_gem_name.gemspec
+#+end_src
+
+*** =git ls-files= について
+    - gitにindexされているファイルの一覧
+    - 新しいファイルは，ステージング領域にaddされると表示に加わる
+    - =.gitignore= で無視するファイルを設定できる
+
+*** 雛形のbuild
+    - =*.gemspec= のTODOを外す（内容をきちんと書く）
+    - =rake build= でbuildできる
+
+*** =executable= の作成と注意
+    - =bundle gem -b= で実行可能なスクリプトの雛形ができる
+    - 実行属性を =chmod a+x= でつける
+    - =bundle install --binstubs= を実行すると，上書きされるので注意
+      - 手動で他のディレクトリ（ =/exe= ）に作成するほうが良い
+
+*** Gemfileとgemspecの関係
+    - Gemの依存関係のかき分け
+      - Gemfile
+        - =Gemfile= に =gemspec= メソッドがあれば， =.gemspec= 内のGem依存関係を解決する
+      - *.gemspec
+        - Gemを利用時に必要なGemを追加
+
+*** COMMENT binstubs
+    - rails 4以降，binstubsはgitに加えるように推奨されている
+      - [[http://factore.ca/blog/250-safe-binstubs-with-rails][factor[e]]]
+
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
 **** 課題
@@ -216,12 +269,14 @@ gem install bundler
     - 作成したGemのソースコードをGitHubに公開しなさい
       - =hub create= でGitHubのリポジトリを作成
       - =git add= ， =git commit= でコミット
-      - =git push origin master= でGitHubに登録
+      - =git push -u origin master= でGitHubに登録
 **** 提出
     - GitHubのURLをLMSに提出する
-* COMMENT 第5章 Rake
-*** Rake
+* COMMENT 第5章 Rakeとテスト
+** Rake
     - [[https://github.com/jimweirich/rake][jimweirich/rake]]
+** テスト付きでGemの雛形を生成
+   - 
 * COMMENT Memo
 ** 演習課題
 **** 演習
