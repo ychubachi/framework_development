@@ -214,8 +214,8 @@ gem install bundler
 *** 4-2 作成したGemをGitHubで公開する
 **** 課題
     - 作成したGemのソースコードをGitHubに公開しなさい
-      - =git add= ， =git commit= でコミット
       - =hub create= でGitHubのリポジトリを作成
+      - =git add= ， =git commit= でコミット
       - =git push origin master= でGitHubに登録
 **** 提出
     - GitHubのURLをLMSに提出する
