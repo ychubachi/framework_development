@@ -1,4 +1,4 @@
-% Created 2014-10-28 火 17:54
+% Created 2014-10-28 火 19:07
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -399,7 +399,9 @@ gem install bundler
 \end{minted}
 \end{block}
 \end{frame}
-\begin{frame}[fragile,label=sec-4-2-4]{BundlerによるGemの作成}
+\section{BundlerによるGemの作成}
+\label{sec-4-3}
+\begin{frame}[fragile,label=sec-4-3-1]{ひな形の自動生成}
  \begin{block}{ひな形の自動生成}
 \begin{itemize}
 \item \href{http://bundler.io/v1.7/bundle_gem.html}{Bundler: The best way to manage a Ruby application's gems}
@@ -412,9 +414,64 @@ bundle gem my_gem_name
 \end{minted}
 \end{block}
 \end{frame}
+\begin{frame}[fragile,label=sec-4-3-2]{雛形の内容}
+ \begin{minted}[]{text}
+.
+├── .git
+  <snip>
+├── .gitignore
+├── Gemfile
+├── LICENSE.txt
+├── README.md
+├── Rakefile
+├── lib
+│   ├── my_gem_name
+│   │   └── version.rb
+│   └── my_gem_name.rb
+└── my_gem_name.gemspec
+\end{minted}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-3]{\texttt{git ls-files} について}
+ \begin{itemize}
+\item gitにindexされているファイルの一覧
+\item 新しいファイルは，ステージング領域にaddされると表示に加わる
+\item \texttt{.gitignore} で無視するファイルを設定できる
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-4]{雛形のbuild}
+ \begin{itemize}
+\item \texttt{*.gemspec} のTODOを外す（内容をきちんと書く）
+\item \texttt{rake build} でbuildできる
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-5]{\texttt{executable} の作成と注意}
+ \begin{itemize}
+\item \texttt{bundle gem -b} で実行可能なスクリプトの雛形ができる
+\item 実行属性を \texttt{chmod a+x} でつける
+\item \texttt{bundle install -{}-binstubs} を実行すると，上書きされるので注意
+\begin{itemize}
+\item 手動で他のディレクトリ（ \texttt{/exe} ）に作成するほうが良い
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile,label=sec-4-3-6]{Gemfileとgemspecの関係}
+ \begin{itemize}
+\item Gemの依存関係のかき分け
+\begin{itemize}
+\item Gemfile
+\begin{itemize}
+\item \texttt{Gemfile} に \texttt{gemspec} メソッドがあれば， \texttt{.gemspec} 内のGem依存関係を解決する
+\end{itemize}
+\item *.gemspec
+\begin{itemize}
+\item Gemを利用時に必要なGemを追加
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
 \section{演習課題}
-\label{sec-4-3}
-\begin{frame}[label=sec-4-3-1]{4-1 Bundlerで簡単なGemを作ってみる}
+\label{sec-4-4}
+\begin{frame}[label=sec-4-4-1]{4-1 Bundlerで簡単なGemを作ってみる}
 \begin{block}{課題}
 \begin{itemize}
 \item 簡単な計算を行うコマンドをGemとして作成しなさい．
@@ -430,14 +487,14 @@ bundle gem my_gem_name
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label=sec-4-3-2]{4-2 作成したGemをGitHubで公開する}
+\begin{frame}[fragile,label=sec-4-4-2]{4-2 作成したGemをGitHubで公開する}
  \begin{block}{課題}
 \begin{itemize}
 \item 作成したGemのソースコードをGitHubに公開しなさい
 \begin{itemize}
 \item \texttt{git add} ， \texttt{git commit} でコミット
 \item \texttt{hub create} でGitHubのリポジトリを作成
-\item \texttt{git push origin master} でGitHubに登録
+\item \texttt{git push -u origin master} でGitHubに登録
 \end{itemize}
 \end{itemize}
 \end{block}
