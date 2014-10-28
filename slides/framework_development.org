@@ -195,14 +195,22 @@ vagrant ssh
     - [[http://bundler.io/rationale.html][Why Bundler exists]]
     - [[https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs][Understanding binstubs · sstephenson/rbenv Wiki]]
     - [[http://bundler.io/gemfile.html][Gemfile]]
-*** インストール
+*** bundleコマンドのインストール
+**** bundleコマンド
+     - =gem= と違い， =bundle= コマンドは標準ではインストールされていない．
+**** Gemによるインストール方法
 #+begin_src bash
 gem install bundler
 #+end_src
     
-** BundlerによるGemの作成
-*** ひな形の自動生成
+*** BundlerによるGemの作成
+**** ひな形の自動生成
     - [[http://bundler.io/v1.7/bundle_gem.html][Bundler: The best way to manage a Ruby application's gems]]
+**** コマンド
+#+begin_src bash
+bundle gem my_gem_name
+#+end_src
+
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
 **** 課題
