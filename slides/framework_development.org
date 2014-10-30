@@ -188,7 +188,7 @@ vagrant ssh
     - Gemコマンドを直接用いてインストールする方法では，
       必要なGemを主導で管理しなくてはならないし，
       バージョンの異なるGemを用いる場合もある
-** Bundlerの解説
+** BundlerでGemを利用する
 *** Bundlerについて
     - [[http://bundler.io/][Bundler: The best way to manage a Ruby application's gems]]
 *** ドキュメントの解説
@@ -272,19 +272,44 @@ bundle gem my_gem_name
       - =git push -u origin master= でGitHubに登録
 **** 提出
     - GitHubのURLをLMSに提出する
-* COMMENT 第5章 Rakeとテスト
-** Rake
+*** 4-3 GemをRubyOrgに登録する
+**** 課題
+    - 作成したGemをRubyOrgに登録する
+    - Gemの名前には，aiitのアカウント名を先頭につけること
+      - a14???xx_name
+**** 提出
+     - RubyOrgのURL
+* COMMENT 第5章 タスクの実行
+** Rakeの文書
     - [[https://github.com/jimweirich/rake][jimweirich/rake]]
+    - [[http://devblog.avdi.org/2014/04/21/rake-part-1-basics/][Rake Part 1: Files and Rules | Virtuous Code]]
+      - %W [[http://docs.ruby-lang.org/ja/1.9.3/doc/spec=2fliteral.html#percent][リテラル]]
+    - [[http://nilquebe.blogspot.jp/2014/06/learn-advanced-rake-in-7-episodes.html][Nilquebe Blog: Rake Part 1: Files and Rules 翻訳]]
+
+** 簡単なRakefileの例
+*** コード
+#+begin_src ruby
+# coding: utf-8
+task :hello do
+  puts 'do task hello!'
+end
+#+end_src
+
+*** TODO 実行方法
+#+begin_src bash
+rake -T
+#+end_src
+
+
+* COMMENT 第6章 単体テスト
 ** テスト付きでGemの雛形を生成
    - 
 * COMMENT Memo
-** 演習課題
-**** 演習
-       - 演習
-	 - Gemを生成する
-	   - 生成された内容を調べる
-	   - Rakeの使い方
-	 - その後，テストの話をする
+  - Rubyの入門
+    [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]
+  - Rubyの記号
+    - [[http://docs.ruby-lang.org/ja/2.1.0/class/Kernel.html][module Kernel]]
+  - =$LOADED_FEATURES= を説明すると良いのでは
 
 * COMMENT 第3章 Rubyによる単体テスト
 *** Memo
