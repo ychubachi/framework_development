@@ -281,11 +281,11 @@ bundle gem my_gem_name
       - a14???xx_name
 **** 提出
      - RubyOrgのURL
-* COMMENT 第5章 タスクの実行
+* 第5章 Rakeによるタスクの実行
 ** Rakeの文書
+*** ドキュメント
     - [[https://github.com/jimweirich/rake][jimweirich/rake]]
     - [[http://devblog.avdi.org/2014/04/21/rake-part-1-basics/][Rake Part 1: Files and Rules | Virtuous Code]]
-      - %W [[http://docs.ruby-lang.org/ja/1.9.3/doc/spec=2fliteral.html#percent][リテラル]]
     - [[http://nilquebe.blogspot.jp/2014/06/learn-advanced-rake-in-7-episodes.html][Nilquebe Blog: Rake Part 1: Files and Rules 翻訳]]
 
 ** 簡単なRakefileの例
@@ -297,7 +297,7 @@ task :hello do
 end
 #+end_src
 
-*** TODO 実行方法
+*** 実行方法
 #+begin_src bash
 rake -T
 #+end_src

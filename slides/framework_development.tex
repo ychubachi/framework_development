@@ -1,4 +1,4 @@
-% Created 2014-10-30 木 20:59
+% Created 2014-11-06 木 20:10
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -504,6 +504,34 @@ gemspecファイルに依存関係を記述すること
 \item RubyOrgのURL
 \end{itemize}
 \end{block}
+\end{frame}
+\part{第5章 Rakeによるタスクの実行}
+\label{sec-5}
+\section{Rakeの文書}
+\label{sec-5-1}
+\begin{frame}[label=sec-5-1-1]{ドキュメント}
+\begin{itemize}
+\item \href{https://github.com/jimweirich/rake}{jimweirich/rake}
+\item \href{http://devblog.avdi.org/2014/04/21/rake-part-1-basics/}{Rake Part 1: Files and Rules | Virtuous Code}
+\item \href{http://nilquebe.blogspot.jp/2014/06/learn-advanced-rake-in-7-episodes.html}{Nilquebe Blog: Rake Part 1: Files and Rules 翻訳}
+\end{itemize}
+\end{frame}
+
+\section{簡単なRakefileの例}
+\label{sec-5-2}
+\begin{frame}[fragile,label=sec-5-2-1]{コード}
+ \begin{minted}[]{ruby}
+# coding: utf-8
+task :hello do
+  puts 'do task hello!'
+end
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-5-2-2]{実行方法}
+ \begin{minted}[]{bash}
+rake -T
+\end{minted}
 \end{frame}
 % Emacs 24.3.1 (Org mode 8.2.6)
 \end{document}
