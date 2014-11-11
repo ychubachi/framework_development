@@ -289,23 +289,109 @@ bundle gem my_gem_name
     - [[http://nilquebe.blogspot.jp/2014/06/learn-advanced-rake-in-7-episodes.html][Nilquebe Blog: Rake Part 1: Files and Rules 翻訳]]
 
 ** 簡単なRakefileの例
-*** コード
+*** タスクの定義
+**** Rakefile
 #+begin_src ruby
-# coding: utf-8
 task :hello do
   puts 'do task hello!'
 end
 #+end_src
 
-*** 実行方法
+*** 説明を追加した例
+**** Rakefile
+#+begin_src ruby
+desc 'say hello'
+task :hello do
+  puts 'do task hello!'
+end
+#+end_src
+
+*** タスクの一覧
+**** コマンド
 #+begin_src bash
 rake -T
 #+end_src
 
+*** Bundlerが自動生成するgem
+**** Rakefile
+#+begin_src ruby
+require "bundler/gem_tasks"
+#+end_src
 
-* COMMENT 第6章 単体テスト
-** テスト付きでGemの雛形を生成
-   - 
+**** タスクの定義
+     - 実際のタスクは =bundler/gem_tasks= 内にある
+     - なお， コードの在処は =gem which bundler= で確認できる
+
+* 第6章 Rubyによるテスト
+** Rubyによるテスト技法
+*** 各種のテスト技法(1)
+   - Minitest
+     - Rubyに標準のテストツール
+     - [[http://www.ruby-doc.org/stdlib-2.0/libdoc/minitest/rdoc/MiniTest.html][Module: MiniTest (Ruby 2.0.0)]]
+   - RSpec
+     - 広く普及しているテストツール
+     - 「振る舞い駆動」
+     - [[http://rspec.info/][RSpec.info: home]]
+*** 各種のテスト技法(2)
+   - Cucumber
+     - [[http://cukes.info/][Cucumber - Making BDD fun]]
+   - Turnip
+     - [[https://github.com/jnicklas/turnip][jnicklas/turnip]]
+
+** テストを含むGemの生成
+*** bundle gemのオプション
+**** rspecを使う場合
+#+begin_src bash
+bundle gem gem_rspec --test
+#+end_src
+
+**** minitestを使う場合
+#+begin_src bash
+bundle gem gem_minitest --test=minitest
+#+end_src
+
+*** minitest用のRakefile
+**** Rakefile
+#+begin_src ruby
+require "bundler/gem_tasks"
+require "rake/testtask"
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << "test"
+end
+
+task :default => :test
+#+end_src
+
+*** test/の中身
+#+begin_src txt
+test
+|-- minitest_helper.rb
+`-- test_gem_minitest.rb
+#+end_src
+
+
+** COMMENT Rspec
+*** rspec用のRakefile
+**** Rakefile
+#+begin_src ruby
+require "bundler/gem_tasks"
+require "rspec/core/rake_task"
+
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => :spec
+#+end_src
+
+*** spec/の中身
+#+begin_src text
+spec
+|-- gem_test_spec.rb
+`-- spec_helper.rb
+#+end_src
+*** RSpec book
+    [[http://www.rubydoc.info/gems/rspec-core/frames][File: README — Documentation for rspec-core (3.1.7)]]
+    
 * COMMENT Memo
   - Rubyの入門
     [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]

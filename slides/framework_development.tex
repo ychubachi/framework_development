@@ -1,4 +1,4 @@
-% Created 2014-11-06 木 20:10
+% Created 2014-11-11 火 19:51
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -519,18 +519,118 @@ gemspecファイルに依存関係を記述すること
 
 \section{簡単なRakefileの例}
 \label{sec-5-2}
-\begin{frame}[fragile,label=sec-5-2-1]{コード}
- \begin{minted}[]{ruby}
-# coding: utf-8
+\begin{frame}[fragile,label=sec-5-2-1]{タスクの定義}
+ \begin{block}{Rakefile}
+\begin{minted}[]{ruby}
 task :hello do
   puts 'do task hello!'
 end
 \end{minted}
+\end{block}
 \end{frame}
 
-\begin{frame}[fragile,label=sec-5-2-2]{実行方法}
- \begin{minted}[]{bash}
+\begin{frame}[fragile,label=sec-5-2-2]{説明を追加した例}
+ \begin{block}{Rakefile}
+\begin{minted}[]{ruby}
+desc 'say hello'
+task :hello do
+  puts 'do task hello!'
+end
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-5-2-3]{タスクの一覧}
+ \begin{block}{コマンド}
+\begin{minted}[]{bash}
 rake -T
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-5-2-4]{Bundlerが自動生成するgem}
+ \begin{block}{Rakefile}
+\begin{minted}[]{ruby}
+require "bundler/gem_tasks"
+\end{minted}
+\end{block}
+
+\begin{block}{タスクの定義}
+\begin{itemize}
+\item 実際のタスクは \texttt{bundler/gem\_tasks} 内にある
+\item なお， コードの在処は \texttt{gem which bundler} で確認できる
+\end{itemize}
+\end{block}
+\end{frame}
+
+\part{第6章 Rubyによるテスト}
+\label{sec-6}
+\section{Rubyによるテスト技法}
+\label{sec-6-1}
+\begin{frame}[label=sec-6-1-1]{各種のテスト技法(1)}
+\begin{itemize}
+\item Minitest
+\begin{itemize}
+\item Rubyに標準のテストツール
+\item \href{http://www.ruby-doc.org/stdlib-2.0/libdoc/minitest/rdoc/MiniTest.html}{Module: MiniTest (Ruby 2.0.0)}
+\end{itemize}
+\item RSpec
+\begin{itemize}
+\item 広く普及しているテストツール
+\item 「振る舞い駆動」
+\item \href{http://rspec.info/}{RSpec.info: home}
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[label=sec-6-1-2]{各種のテスト技法(2)}
+\begin{itemize}
+\item Cucumber
+\begin{itemize}
+\item \href{http://cukes.info/}{Cucumber - Making BDD fun}
+\end{itemize}
+\item Turnip
+\begin{itemize}
+\item \href{https://github.com/jnicklas/turnip}{jnicklas/turnip}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{テストを含むGemの生成}
+\label{sec-6-2}
+\begin{frame}[fragile,label=sec-6-2-1]{bundle gemのオプション}
+ \begin{block}{rspecを使う場合}
+\begin{minted}[]{bash}
+bundle gem gem_rspec --test
+\end{minted}
+\end{block}
+
+\begin{block}{minitestを使う場合}
+\begin{minted}[]{bash}
+bundle gem gem_minitest --test=minitest
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-2-2]{minitest用のRakefile}
+ \begin{block}{Rakefile}
+\begin{minted}[]{ruby}
+require "bundler/gem_tasks"
+require "rake/testtask"
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << "test"
+end
+
+task :default => :test
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-2-3]{test/の中身}
+ \begin{minted}[]{txt}
+test
+|-- minitest_helper.rb
+`-- test_gem_minitest.rb
 \end{minted}
 \end{frame}
 % Emacs 24.3.1 (Org mode 8.2.6)
