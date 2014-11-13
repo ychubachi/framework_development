@@ -1,4 +1,4 @@
-% Created 2014-11-11 火 19:51
+% Created 2014-11-13 木 19:49
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -598,15 +598,9 @@ require "bundler/gem_tasks"
 \section{テストを含むGemの生成}
 \label{sec-6-2}
 \begin{frame}[fragile,label=sec-6-2-1]{bundle gemのオプション}
- \begin{block}{rspecを使う場合}
+ \begin{block}{minitestを使う場合}
 \begin{minted}[]{bash}
-bundle gem gem_rspec --test
-\end{minted}
-\end{block}
-
-\begin{block}{minitestを使う場合}
-\begin{minted}[]{bash}
-bundle gem gem_minitest --test=minitest
+bundle gem gem_mini_test --test=minitest
 \end{minted}
 \end{block}
 \end{frame}
@@ -627,11 +621,47 @@ task :default => :test
 \end{frame}
 
 \begin{frame}[fragile,label=sec-6-2-3]{test/の中身}
- \begin{minted}[]{txt}
+ \begin{block}{ファイル}
+\begin{minted}[]{text}
 test
 |-- minitest_helper.rb
 `-- test_gem_minitest.rb
 \end{minted}
+\end{block}
+\begin{block}{内容}
+\begin{description}
+\item[{\texttt{minitest\_helper.rb}}] テストを実行する際に必ず読み込まれる
+\item[{\texttt{test\_gem\_minitest.rb}}] テストを書く場所
+\end{description}
+\end{block}
+\end{frame}
+
+
+
+
+\section{minitestの書き方}
+\label{sec-6-3}
+\begin{frame}[label=sec-6-3-1]{minitestのドキュメント}
+\begin{block}{ドキュメント}
+\begin{itemize}
+\item 英語版
+\begin{itemize}
+\item \href{http://ruby-doc.org/stdlib-2.1.0/libdoc/minitest/rdoc/MiniTest.html}{Module: MiniTest (Ruby 2.1.0)}
+\end{itemize}
+\item 日本語版
+\begin{itemize}
+\item \href{http://docs.ruby-lang.org/ja/2.1.0/library/minitest=2funit.html}{library minitest/unit}
+\end{itemize}
+\end{itemize}
+\end{block}
+\begin{block}{コード}
+\begin{itemize}
+\item GitHub参照
+\begin{itemize}
+\item \href{https://github.com/ychubachi/gem_minitest}{ychubachi/gem\_minitest}
+\end{itemize}
+\end{itemize}
+\end{block}
 \end{frame}
 % Emacs 24.3.1 (Org mode 8.2.6)
 \end{document}

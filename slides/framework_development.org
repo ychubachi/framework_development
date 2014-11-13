@@ -340,14 +340,9 @@ require "bundler/gem_tasks"
 
 ** テストを含むGemの生成
 *** bundle gemのオプション
-**** rspecを使う場合
-#+begin_src bash
-bundle gem gem_rspec --test
-#+end_src
-
 **** minitestを使う場合
 #+begin_src bash
-bundle gem gem_minitest --test=minitest
+bundle gem gem_mini_test --test=minitest
 #+end_src
 
 *** minitest用のRakefile
@@ -364,14 +359,40 @@ task :default => :test
 #+end_src
 
 *** test/の中身
-#+begin_src txt
+**** ファイル
+#+begin_src text
 test
 |-- minitest_helper.rb
 `-- test_gem_minitest.rb
 #+end_src
+**** 内容
+     - =minitest_helper.rb= :: テストを実行する際に必ず読み込まれる
+     - =test_gem_minitest.rb= :: テストを書く場所
 
+
+
+
+** minitestの書き方
+*** minitestのドキュメント
+**** ドキュメント
+    - 英語版
+      - [[http://ruby-doc.org/stdlib-2.1.0/libdoc/minitest/rdoc/MiniTest.html][Module: MiniTest (Ruby 2.1.0)]]
+    - 日本語版
+      - [[http://docs.ruby-lang.org/ja/2.1.0/library/minitest=2funit.html][library minitest/unit]]
+*** Gem版minitest
+**** コード
+    - GitHub参照
+      - [[https://github.com/ychubachi/gem_minitest][ychubachi/gem_minitest]]
+*** Assertion
+    - Assertionとは？
+      - [[http://docs.ruby-lang.org/ja/2.1.0/class/MiniTest=3a=3aAssertions.html][module MiniTest::Assertions]]
 
 ** COMMENT Rspec
+**** rspecを使う場合
+#+begin_src bash
+bundle gem gem_rspec --test
+#+end_src
+
 *** rspec用のRakefile
 **** Rakefile
 #+begin_src ruby
