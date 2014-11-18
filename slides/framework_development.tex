@@ -1,4 +1,4 @@
-% Created 2014-11-13 木 20:35
+% Created 2014-11-18 火 19:08
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -29,7 +29,7 @@
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
-  pdfcreator={Emacs 24.3.1 (Org mode 8.2.6)}}
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.10)}}
 \begin{document}
 
 \maketitle
@@ -638,7 +638,6 @@ test
 
 
 
-
 \section{minitestの書き方}
 \label{sec-6-3}
 \begin{frame}[label=sec-6-3-1]{minitestのドキュメント}
@@ -673,5 +672,113 @@ test
 \end{itemize}
 \end{block}
 \end{frame}
-% Emacs 24.3.1 (Org mode 8.2.6)
+
+\section{演習課題}
+\label{sec-6-4}
+\begin{frame}[fragile,label=sec-6-4-1]{6-1 Gemの作成}
+ \begin{block}{課題}
+\begin{itemize}
+\item テストの演習をするためのGemを作成しなさい
+\end{itemize}
+\end{block}
+\begin{block}{コマンド}
+\begin{minted}[]{bash}
+bundle gem mini_test_practice --test=minitest
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-4-2]{6-2 メソッドの作成(1)}
+ \begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{description}
+\item[{メソッド名}] \texttt{odd?}
+\item[{内容}] 整数を入力として受け取り，値が奇数ならば真を返す
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-4-3]{6-3 メソッドの作成(2)}
+ \begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{description}
+\item[{メソッド名}] \texttt{check\_number?}
+\item[{内容}] 引数が0以外ではじまる4桁の数字であり，なおかつ，値が偶数ならば
+真を返す
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-4-4]{6-4 メソッドの作成(3)}
+ \begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{description}
+\item[{メソッド名}] \texttt{enough\_length?}
+\item[{内容}] 文字列を受け取り，その長さが3文字以上，8文字以下であれば
+真を返す
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-4-5]{6-5 メソッドの作成(4)}
+ \begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{description}
+\item[{メソッド名}] \texttt{divide}
+\item[{内容}] 引数として割る数と割られる数を取り，割り算をした結果を返す．
+ただし，0で割り算をしたら例外を発生する
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-6-4-6]{6-6 メソッドの作成(5)}
+ \begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{description}
+\item[{メソッド名}] \texttt{fizz\_buzz}
+\item[{内容}] 引数に数値を1つとる．3の倍数の時は”Fizz”を返す．
+5の倍数の時は”Buzz”を返す．3と5の公倍数のときは”FizzBuzz”を返す．
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-6-4-7]{6-7 メソッドの作成(6)}
+\begin{block}{課題}
+\begin{itemize}
+\item 次の仕様に沿ったテストを作成しなさい
+\item テストができたら，コードを書きなさい
+\end{itemize}
+\end{block}
+\begin{block}{仕様}
+\begin{itemize}
+\item 標準出力に「Hello」と表示するプログラムのテストと実装を行いなさい
+\end{itemize}
+\end{block}
+\end{frame}
+% Emacs 24.3.1 (Org mode 8.2.10)
 \end{document}

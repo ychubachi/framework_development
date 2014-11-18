@@ -14,7 +14,7 @@
 
 #+TITLE: フレームワーク開発特論
 #+AUTHOR: 中鉢 欣秀
-#+DATE: 
+#+DATE:
 
 #+LATEX_HEADER: \institute[AIIT]{産業技術大学院大学(AIIT)}
 
@@ -107,7 +107,7 @@ vagrant init ychubachi/enpit
 **** 開発環境の構築
      - enPiT仮想化環境をインストールする
 **** コマンド
-     
+
 #+begin_src bash
 vagrant init ychubachi/enpit
 vagrant up
@@ -371,7 +371,6 @@ test
 
 
 
-
 ** minitestの書き方
 *** minitestのドキュメント
 **** ドキュメント
@@ -386,6 +385,67 @@ test
 **** コード
     - GitHub参照
       - [[https://github.com/ychubachi/gem_minitest][ychubachi/gem_minitest]]
+
+** 演習課題
+*** 6-1 Gemの作成
+**** 課題
+     - テストの演習をするためのGemを作成しなさい
+**** コマンド
+
+#+begin_src bash
+  bundle gem mini_test_practice --test=minitest
+#+end_src
+
+*** 6-2 メソッドの作成(1)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - メソッド名 :: =odd?=
+     - 内容 :: 整数を入力として受け取り，値が奇数ならば真を返す
+
+*** 6-3 メソッドの作成(2)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - メソッド名 :: =check_number?=
+     - 内容 :: 引数が0以外ではじまる4桁の数字であり，なおかつ，値が偶数ならば
+       真を返す
+
+*** 6-4 メソッドの作成(3)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - メソッド名 :: =enough_length?=
+     - 内容 :: 文字列を受け取り，その長さが3文字以上，8文字以下であれば
+       真を返す
+
+*** 6-5 メソッドの作成(4)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - メソッド名 :: =divide=
+     - 内容 :: 引数として割る数と割られる数を取り，割り算をした結果を返す．
+       ただし，0で割り算をしたら例外を発生する
+
+*** 6-6 メソッドの作成(5)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - メソッド名 :: =fizz_buzz=
+     - 内容 :: 引数に数値を1つとる．3の倍数の時は”Fizz”を返す．
+       5の倍数の時は”Buzz”を返す．3と5の公倍数のときは”FizzBuzz”を返す．
+
+*** 6-7 メソッドの作成(6)
+**** 課題
+     - 次の仕様に沿ったテストを作成しなさい
+     - テストができたら，コードを書きなさい
+**** 仕様
+     - 標準出力に「Hello」と表示するプログラムのテストと実装を行いなさい
 
 ** COMMENT Rspec
 **** rspecを使う場合
@@ -412,7 +472,7 @@ spec
 #+end_src
 *** RSpec book
     [[http://www.rubydoc.info/gems/rspec-core/frames][File: README — Documentation for rspec-core (3.1.7)]]
-    
+
 * COMMENT Memo
   - Rubyの入門
     [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]
