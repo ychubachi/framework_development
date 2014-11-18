@@ -447,6 +447,10 @@ test
 **** 仕様
      - 標準出力に「Hello」と表示するプログラムのテストと実装を行いなさい
 
+*** 参考
+**** サンプル
+     - https://github.com/ychubachi/mini_test_practice
+
 ** COMMENT Rspec
 **** rspecを使う場合
 #+begin_src bash
