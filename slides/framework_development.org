@@ -479,9 +479,12 @@ test
     - 設定ファイル
       - =.travis.yml= は =bundle gem= コマンドを実行した段階で
 	生成されている
-    - 手動で行う場合
-      - GitHubのフックを設定する
-    - コマンドで行う場合
+    - GitHubのフックを設定する
+      1. GitHubでプロジェクトのリポジトリを開く
+      2. Settings -> Webhooks & Services
+      3. Add Services ボタンから Travis CI を選択
+
+*** コマンドで行う場合
       - =travis= コマンドをインストール
       - =travis enable= コマンドで連携開始
 ** 演習課題

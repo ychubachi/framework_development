@@ -1,4 +1,4 @@
-% Created 2014-11-20 木 19:46
+% Created 2014-11-20 木 20:44
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage{zxjatype}
 \usepackage[ipa]{zxjafont}
@@ -846,15 +846,19 @@ bundle gem mini_test_practice --test=minitest
 \item \texttt{.travis.yml} は \texttt{bundle gem} コマンドを実行した段階で
 生成されている
 \end{itemize}
-\item 手動で行う場合
-\begin{itemize}
 \item GitHubのフックを設定する
+\begin{enumerate}
+\item GitHubでプロジェクトのリポジトリを開く
+\item Settings -> Webhooks \& Services
+\item Add Services ボタンから Travis CI を選択
+\end{enumerate}
 \end{itemize}
-\item コマンドで行う場合
-\begin{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-7-2-4]{コマンドで行う場合}
+ \begin{itemize}
 \item \texttt{travis} コマンドをインストール
 \item \texttt{travis enable} コマンドで連携開始
-\end{itemize}
 \end{itemize}
 \end{frame}
 \section{演習課題}
