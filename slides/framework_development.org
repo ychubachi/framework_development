@@ -248,9 +248,9 @@ bundle gem my_gem_name
 *** Gemfileとgemspecの関係
     - Gemの依存関係のかき分け
       - Gemfile
-        - =Gemfile= に =gemspec= メソッドがあれば， =.gemspec= 内のGem依存関係を解決する
+	- =Gemfile= に =gemspec= メソッドがあれば， =.gemspec= 内のGem依存関係を解決する
       - *.gemspec
-        - Gemを利用時に必要なGemを追加
+	- Gemを利用時に必要なGemを追加
 
 *** COMMENT binstubs
     - rails 4以降，binstubsはgitに加えるように推奨されている
@@ -322,7 +322,7 @@ require "bundler/gem_tasks"
      - 実際のタスクは =bundler/gem_tasks= 内にある
      - なお， コードの在処は =gem which bundler= で確認できる
 
-* 第6章 Rubyによるテスト
+* 第6章 Rubyによる単体テスト
 ** Rubyによるテスト技法
 *** 各種のテスト技法(1)
    - Minitest
@@ -368,7 +368,6 @@ test
 **** 内容
      - =minitest_helper.rb= :: テストを実行する際に必ず読み込まれる
      - =test_gem_minitest.rb= :: テストを書く場所
-
 
 
 ** minitestの書き方
@@ -451,51 +450,59 @@ test
 **** サンプル
      - https://github.com/ychubachi/mini_test_practice
 
-** COMMENT Rspec
-**** rspecを使う場合
-#+begin_src bash
-bundle gem gem_rspec --test
-#+end_src
-
-*** rspec用のRakefile
-**** Rakefile
-#+begin_src ruby
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-
-RSpec::Core::RakeTask.new(:spec)
-
-task :default => :spec
-#+end_src
-
-*** spec/の中身
-#+begin_src text
-spec
-|-- gem_test_spec.rb
-`-- spec_helper.rb
-#+end_src
-*** RSpec book
-    [[http://www.rubydoc.info/gems/rspec-core/frames][File: README — Documentation for rspec-core (3.1.7)]]
-
-* COMMENT Memo
+* 第7章 テスト自動化と統合テスト
+** Guardによる方法
+*** Guardとは？
+   - =Guard= とは，ファイルの更新を監視して，更新があれば指定されたタスクを
+     実行する仕組み
+   - 詳細
+     - [[https://github.com/guard/guard][guard/guard]]
+*** MiniTestの自動化
+    - Guardにはプラグイン機能がある
+    - MiniTest用のプラグイン
+      - [[https://github.com/guard/guard-minitest][guard/guard-minitest]]
+    - Gemfileに追加し，bundle installが必要
+*** サンプル
+    - Guard用の設定を行ったコード
+      - [[https://github.com/ychubachi/mini_test_practice][ychubachi/mini_test_practice]]
+** Travis CIによる方法
+*** Travis CIとは？
+    - GitHubと連携し，新たなコミットがGitHubにPushされたら
+      自動でテスト（など）を行う機能
+    - CI (continuous integration)
+      - 継続的統合などと呼ばれる
+*** Travis CIについて
+    - https://travis-ci.org/
+    - サンプルを実行する例
+    - 設定は =.travis.yml= に書く
+*** GitHubと連携する方法
+    - 設定ファイル
+      - =.travis.yml= は =bundle gem= コマンドを実行した段階で
+	生成されている
+    - 手動で行う場合
+      - GitHubのフックを設定する
+    - コマンドで行う場合
+      - =travis= コマンドをインストール
+      - =travis enable= コマンドで連携開始
+** 演習課題
+*** 7-1 Guard
+**** 課題
+     - Guardを利用して，テストを自動化しなさい
+*** 7-2 Travis CI
+**** 課題
+     - GitHubとTravis CIを連携させ，継続的統合を行いなさい
+* COMMENT 第8章 まとめ
+  - 課題の提出方法
+  - Ruby on Railsの例
+  - 魔法などどこにもない！
+  - 英語の原点に慣れ親しもう
+* COMMENT 補足資料
   - Rubyの入門
     [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]
   - Rubyの記号
     - [[http://docs.ruby-lang.org/ja/2.1.0/class/Kernel.html][module Kernel]]
   - =$LOADED_FEATURES= を説明すると良いのでは
-
-* COMMENT 第3章 Rubyによる単体テスト
-*** Memo
-    - 簡単なコードでテストを通す
-
-* COMMENT 第4章 Rubyによる統合テスト
-* COMMENT 第5章 GitHubによるコードの共有
-* COMMENT 第6章 CIツールによるテスト自動化
-* COMMENT 第7章 まとめ
-* COMMENT Memo
   - [[http://atodekaku.tumblr.com/post/33835003602/gem-2012-10-14-sun][デザイナーの為のgem作成勉強会に参加しました = 2012.10.14.Sun • FIXME]]
   - [[https://rubygems.org/][RubyGems.org | your community gem host]]
-  - 魔法などどこにもない！
-  - 英語の原点に慣れ親しもう
   - このページの解説
     - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
