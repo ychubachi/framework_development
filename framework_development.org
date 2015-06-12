@@ -23,13 +23,13 @@
 *** はじめに
 **** 自己紹介
      - [[https://github.com/ychubachi/enpit/blob/master/slides/self_introduction.org][enpit/self_introduction.org at master · ychubachi/enpit]]
-**** シラバス
-     - [[http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf][フレームワーク開発特論]]
-**** ハンドアウト
-     - [[https://github.com/ychubachi/framework_development/blob/master/slides/framework_development.org][framework_development/framework_development.org at master · ychubachi/framework_development]]
+**** 資料の入手
+     - 資料はGitHubからダウンロードできる
+       [[https://github.com/ychubachi/framework_development][ychubachi/framework_development]]
+     - 随時更新するので watch しておくとよい
 *** 授業の計画
 **** スケジュールの調整
-     - 基本的にはシラバス通りに行うが，
+     - 基本的には資料の通り進めるが，
        計画の変更はあり得る
 **** 休講・補講
      - なし（予定）
@@ -37,7 +37,8 @@
 ** 学習目的・目標
 *** この授業の目的
     - 再利用可能なコンポーネント開発の概念的理解を行う
-    - RubyのGemを題材に，実装技術を学ぶ
+    - 基本技術を押さえて，高度なフレームワークを使いこなせるようになる
+      - RubyのGemを題材に，実装技術を学ぶ
 *** この授業の目標
     - Rubyで実際にコーデングを行い，コンポーネントを開発できる
     - Git/GitHubを用い，開発の効率の向上・成果物の公開などができる
@@ -47,11 +48,9 @@
 ** 授業の方法
 *** この授業で用いる資料
     - この授業で取り上げる資料は，開発コミュニティが公開している
-      Webページを中心に適宜紹介する
+      Webページを中心に解説する
     - エンジニアは英語の原典を読めなくてはならないので，英語のページ
       を見ながら解説する
-    - スライド・ハンドアウトは適宜更新するので，
-      必要に応じてダウンロードすること
 
 *** Git/GitHubの活用
     - GitHubのアカウントを作成しておくこと
@@ -65,8 +64,8 @@
       - [[https://github.com/ychubachi/enpit/blob/master/slides/preparation.org][enpit/preparation.org at master · ychubachi/enpit]]
     - 動画を参照
       - http://youtu.be/kePqg8dCgJM
-    - 注意
-      - 動画の視聴及び作業のために2時間程度かかる
+#    - 注意
+#      - 動画の視聴及び作業のために2時間程度かかる
 
 *** 仮想化環境の設定
 **** 内容

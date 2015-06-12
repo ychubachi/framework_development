@@ -1,12 +1,8 @@
 * フレームワーク開発特論
-  - 授業資料等([[https://github.com/ychubachi/framework_development/blob/master/framework_development.org][org)]]([[https://github.com/ychubachi/framework_development/raw/master/framework_development.pdf][pdf]])
+  - 資料([[https://github.com/ychubachi/framework_development/blob/master/framework_development.org][org)]]([[https://github.com/ychubachi/framework_development/raw/master/framework_development.pdf][pdf]])
   - [[http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf][シラバス]]
 * PDFの生成方法
   - org ファイルを beamer でエキスポートした後、
-    xelatex コマンドで生成できます。
-
-#+begin_src bash
-xelatex --shell-escape framework_development.tex
-#+end_src
+    latexmk コマンドで生成できます。
 
 
