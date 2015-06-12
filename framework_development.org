@@ -59,13 +59,28 @@
 *** 仮想化環境の準備
   - Rubyの開発環境
     - enPiTの仮想環境を利用
-  - インストールの方法
+  - 目標
+    - 「Vagrant」を利用できるようにする
+
+*** インストール方法（Windows）
     - 資料
       - [[https://github.com/ychubachi/enpit/blob/master/slides/preparation.org][enpit/preparation.org at master · ychubachi/enpit]]
     - 動画を参照
       - http://youtu.be/kePqg8dCgJM
 #    - 注意
 #      - 動画の視聴及び作業のために2時間程度かかる
+
+*** インストール方法（Mac）
+**** Homebrowのインストール
+    - [[http://brew.sh/index.html][Homebrew — The missing package manager for OS X]]
+    - [[http://caskroom.io/][Homebrew Cask]]
+
+**** VBとVagrantのインストール
+
+#+begin_src bash
+brew cask install virtualbox
+brew cask install vagrant
+#+end_src
 
 *** 仮想化環境の設定
 **** 内容
@@ -78,6 +93,17 @@
 #+begin_src bash
 vagrant init ychubachi/enpit
 #+end_src
+
+*** 仮想環境利用時の注意事項
+    - 仮想環境は簡単に削除できる
+      - 保存したいファイルは必ずクラウド（GitHub）や，
+	Host側のファイルシステムに残すこと
+    - 仮想環境の更新
+      - ychubachi/enpit は授業期間中でもバージョンアップする可能性がある
+      - この場合も，Guest 側のファイルは消えるので注意
+    - ツールのバージョン
+      - vagrant，VirtualBox を以前にインストールしたことのある場合，
+	最新のバージョンに更新しておくこと
 
 ** 演習課題
 *** 課題1-1
@@ -98,6 +124,16 @@ vagrant init ychubachi/enpit
 vagrant up
 vagrant ssh
 #+end_src
+
+*** 課題1-3（上級者向け）
+**** 仮想環境自体の構築
+     - enPiT 用の Vagarnt の Box 自体を作成するスクリプト等は
+       次のリポジトリにある
+       - https://github.com/ychubachi/vagrant_enpit
+**** 内容のレビュー
+     - Chef等をインストールして Box を作成してみよ
+     - 突っ込み所は多いと思われるので，改善点に気がついたら issue にあげよ
+     - Pull request も歓迎する
 
 * 第2章 Ruby自体のバージョン管理
 ** Rbenvの解説
