@@ -6,7 +6,7 @@
     xelatex コマンドで生成できます。
 
 #+begin_src bash
-xelatex -synctex=1 -interaction=nonstopmode --shell-escape framework_development.tex
+xelatex --shell-escape framework_development.tex
 #+end_src
 
 
