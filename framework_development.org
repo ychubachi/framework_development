@@ -30,11 +30,9 @@
 *** 授業の計画
 **** スケジュールの調整
      - 基本的にはシラバス通りに行うが，
-       本年度から内容を刷新して新規に行う授業のため
-       計画の変更がありえる
-#     - Gitは第9回に予定しているが，前倒しする予定
+       計画の変更はあり得る
 **** 休講・補講
-     - 10/9（木） ビデオ視聴（休講）
+     - なし（予定）
 
 ** 学習目的・目標
 *** この授業の目的
@@ -82,18 +80,6 @@
 vagrant init ychubachi/enpit
 #+end_src
 
-** RubyのGemとは
-*** Rubyによるコンポーネント
-    - Rubyには，再利用可能なコンポーネントを
-      取り扱う仕組みとしてGemがある
-    - 資料
-      - [[http://guides.rubygems.org/][RubyGems Guides]]
-*** 基本的なコマンド
-    - =gem= コマンドは，Rubyでコンポーネントを開発したり，
-      配布をしたりする等の際に利用するコマンド
-    - 後に解説する =bundler= コマンドの基盤
-    - 資料
-      - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
 ** 演習課題
 *** 課題1-1
 **** 開発環境の構築
@@ -114,51 +100,11 @@ vagrant up
 vagrant ssh
 #+end_src
 
-*** 課題1-3
-**** RubyGems Basics
-     - 下記のガイドに記されたサンプルを実行し，
-       =gem= コマンドの基本的な使い方を学ぶ
-**** ガイド
-     - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
-*** 課題1-4
-**** 演習
-     - gemをダウンロードして中身を見てみる
-     - =search=, =fetch=,  =unpack= などのコマンドを活用する
-* 第2章 RubyGemsの概要と周辺のツール群
-** RubyGemsの解説(1)
-*** Ruby Gemsのガイド
-    - [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
-    - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
-    - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
-      - C言語拡張（省略）
-** RubyGemsの解説(2)
-*** Ruby Gemsのガイド
-    - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
-    - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
-    - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
-      - セキュリティ（省略）
-    - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
-** 補足
-*** MiniTest
-    - [[http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html][library minitest/unit]]
-** 演習課題
-*** 課題2-1 RubyGems.orgにアカウントを作成
-     - RubyGems.orgにアカウントを作成しなさい
-     - [[https://rubygems.org/][RubyGems.org | your community gem host]]
-       - 「sign up」リンクから作成する
-*** 課題2-2 ガイドを参考にGemを作る
-     - ガイドの解説に従い，"hola" Gemを作成しなさい
-       - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
-     - 演習用Gemの名前の付け方
-       - hola_(username)
-       - 括弧内はRubyGemsのユーザ名に置き換えよ
-* 第3章 Ruby自体のバージョン管理
+* 第2章 Ruby自体のバージョン管理
 ** Rbenvの解説
 *** Rubyのバージョン
      - Rubyには様々なバージョンがある
-       - 最新の安定版: Ruby 2.1.3
-       - 前世代の安定版: Ruby 2.0.0-p576
-       - 古い安定版: Ruby 1.9.3-p547
+       - 最新の安定版: Ruby 2.2.2
        - 1.8.7，1.9.2はサポート終了
      - これら以外にも，Javaや.NET Framework上で動作するものなど多数．
 *** 開発時の混乱
@@ -176,10 +122,57 @@ vagrant ssh
 **** RVMとの比較
     - [[https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F][Why rbenv? · sstephenson/rbenv Wiki]]
 ** 演習課題
-*** 課題3-1 別なRubyバージョンのインストール
+*** 課題2-1 別なRubyバージョンのインストール
      - =rbenv= を用いて，異なるバージョンのRubyをインストールする
-*** 課題3-2 Rubyのバージョンを切り替える
+*** 課題2-2 Rubyのバージョンを切り替える
     - =rbenv= を用い，=ruby= のバージョンを切り替える
+* 第3章 RubyGemsの概要と周辺のツール群
+** RubyのGemとは
+*** Rubyによるコンポーネント
+    - Rubyには，再利用可能なコンポーネントを
+      取り扱う仕組みとしてGemがある
+    - 資料
+      - [[http://guides.rubygems.org/][RubyGems Guides]]
+*** 基本的なコマンド
+    - =gem= コマンドは，Rubyでコンポーネントを開発したり，
+      配布をしたりする等の際に利用するコマンド
+    - 後に解説する =bundler= コマンドの基盤
+    - 資料
+      - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
+** RubyGemsの解説(1)
+*** Ruby Gemsのガイド
+    - [[http://guides.rubygems.org/what-is-a-gem/][What is a gem? - RubyGems Guides]]
+    - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/gems-with-extensions/][Gems with Extensions - RubyGems Guides]]
+      - C言語拡張（省略）
+** RubyGemsの解説(2)
+*** Ruby Gemsのガイド
+    - [[http://guides.rubygems.org/name-your-gem/][Name your gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/publishing/][Publishing your gem - RubyGems Guides]]
+    - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
+      - セキュリティ（省略）
+    - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
+** 補足
+*** MiniTest
+    - [[http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html][library minitest/unit]]
+** 演習課題
+*** 課題3-1
+     - 下記のガイドに記されたサンプルを実行し，
+       =gem= コマンドの基本的な使い方を学ぶ
+     - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
+*** 課題3-2
+     - gemをダウンロードして中身を見てみる
+     - =search=, =fetch=,  =unpack= などのコマンドを活用する
+*** 課題3-3 RubyGems.orgにアカウントを作成
+     - RubyGems.orgにアカウントを作成しなさい
+     - [[https://rubygems.org/][RubyGems.org | your community gem host]]
+       - 「sign up」リンクから作成する
+*** 課題3-4 ガイドを参考にGemを作る
+     - ガイドの解説に従い，"hola" Gemを作成しなさい
+       - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
+     - 演習用Gemの名前の付け方
+       - hola_(username)
+       - 括弧内はRubyGemsのユーザ名に置き換えよ
 * 第4章 プロジェクトで利用するGemの管理
 ** プロジェクトとGem
 *** プロジェクトごとに異なるGemの集合
@@ -368,7 +361,6 @@ test
 **** 内容
      - =minitest_helper.rb= :: テストを実行する際に必ず読み込まれる
      - =test_gem_minitest.rb= :: テストを書く場所
-
 
 ** minitestの書き方
 *** minitestのドキュメント
