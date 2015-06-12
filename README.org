@@ -1,5 +1,5 @@
 * フレームワーク開発特論
-  - 授業資料等([[https://github.com/ychubachi/framework_development/blob/master/framework_development.org][org)]]([[https://github.com/ychubachi/framework_development/raw/master/framework_development.pdf][PDF]])
+  - 授業資料等([[https://github.com/ychubachi/framework_development/blob/master/framework_development.org][org)]]([[https://github.com/ychubachi/framework_development/raw/master/framework_development.pdf][pdf]])
   - [[http://aiit.ac.jp/master_program/isa/lecture/pdf/h26/4_6.pdf][シラバス]]
 * PDF生成方法
   - org ファイルを beamer でエキスポートした後、 latexmk コマンドで生成できます。
