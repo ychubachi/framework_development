@@ -61,6 +61,9 @@
     - enPiTの仮想環境を利用
   - 目標
     - 「Vagrant」を利用できるようにする
+  - バージョン
+    - VirtualBox 4.3.28
+    - Vagrant 1.7.2
 
 *** インストール方法（Windows）
     - 資料
