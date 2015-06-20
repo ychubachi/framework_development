@@ -282,7 +282,6 @@ require 'mathn'
 #+begin_src bash
 gem install bundler
 #+end_src
-
 ** BundlerによるGemの作成
 *** ひな形の自動生成
 **** ひな形の自動生成
@@ -335,6 +334,10 @@ bundle gem my_gem_name
 *** COMMENT binstubs
     - rails 4以降，binstubsはgitに加えるように推奨されている
       - [[http://factore.ca/blog/250-safe-binstubs-with-rails][factor[e]]]
+
+** TODO 追加予定
+   - bundle exec irb
+   - Gemfile
 
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
