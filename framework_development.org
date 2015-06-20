@@ -138,12 +138,13 @@ vagrant ssh
      - 突っ込み所は多いと思われるので，改善点に気がついたら issue にあげよ
      - Pull request も歓迎する
 
-* 第2章 Ruby自体のバージョン管理
-** Rbenvの解説
+* 第2章 Ruby自体に関すること
+** Rubyのバージョン指定
 *** Rubyのバージョン
      - Rubyには様々なバージョンがある
        - 最新の安定版: Ruby 2.2.2
        - 1.8.7，1.9.2はサポート終了
+     - 日々激しくバージョンアップされる
      - これら以外にも，Javaや.NET Framework上で動作するものなど多数．
 *** 開発時の混乱
     - 開発プロジェクトによって，異なるバージョンのRubyが用いられる
@@ -159,11 +160,59 @@ vagrant ssh
     - [[https://github.com/sstephenson/rbenv][sstephenson/rbenv]]
 **** RVMとの比較
     - [[https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F][Why rbenv? · sstephenson/rbenv Wiki]]
+** 動的な言語としてのRuby
+*** RubyのREPL
+**** irbとは
+- irb = Interactive Ruby
+  - REPL
+- Rubyのコードが実行できる
+  - 構文や動作の確認に便利
+**** 起動と終了
+- 起動するには irb
+- 終了するには exit （または Ctrl-d）
+*** Rubyは動的な言語
+**** 機能の追加の例
+#+begin_src ruby
+require 'pp'
+# pp ENV
+#+end_src
+
+**** 機能の置換の例
+#+begin_src ruby
+require 'mathn'
+# 10/3
+#+end_src
+
+**** 再起動すると？
+     - 拡張は初期化される
+
+*** 参考文献
+- [[http://postd.cc/sick-of-ruby-dynamic-typing-side-effects-object-oriented-programming/][Rubyにはウンザリ！動的型付け、副作用、およびオブジェクト指向プログラミング全般からの考察 | プログラミング | POSTD]]
+
+*** ロードパス
+**** $LOAD_PATH
+     - 既存のライブラリや別ファイルを読み込む際，
+       検索の対象となる =PATH=
+**** $LOADED_FEATURES
+     - 一度 require されたファイルは
+       $LOADED_PEATURES に追加される
+
 ** 演習課題
 *** 課題2-1 別なRubyバージョンのインストール
      - =rbenv= を用いて，異なるバージョンのRubyをインストールする
 *** 課題2-2 Rubyのバージョンを切り替える
-    - =rbenv= を用い，=ruby= のバージョンを切り替える
+    - =rbenv= を用い， =ruby=  のバージョンを切り替える
+*** 課題2-3 irbを使ってみよう
+    - =irb= を用い， =ruby= の様々な構文を試しなさい
+*** 課題2-4 標準ライブラリ
+    - 次のような標準ライブラリを使用してみなさい
+      - yaml
+      - set
+      - net/http
+      - erb
+*** 課題2-5 （上級） pryについて
+    - =irb= と似たツールに =pry= がある
+    - これを使用してみて =irb= との差異を調べなさい
 * 第3章 RubyGemsの概要と周辺のツール群
 ** RubyのGemとは
 *** Rubyによるコンポーネント
