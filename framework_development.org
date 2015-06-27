@@ -258,7 +258,7 @@ require 'mathn'
      - ガイドの解説に従い，"hola" Gemを作成しなさい
        - [[http://guides.rubygems.org/make-your-own-gem/][Make your own gem - RubyGems Guides]]
      - 演習用Gemの名前の付け方
-       - aiit_(username)_hola
+       - hola_(username)
        - 括弧内はRubyGemsのユーザ名に置き換えよ
 * 第4章 プロジェクトで利用するGemの管理
 ** プロジェクトとGem
