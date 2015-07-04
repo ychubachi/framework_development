@@ -335,9 +335,11 @@ bundle gem my_gem_name
     - rails 4以降，binstubsはgitに加えるように推奨されている
       - [[http://factore.ca/blog/250-safe-binstubs-with-rails][factor[e]]]
 
-** TODO 追加予定
+*** Bundlerと$LOAD_PATH
+**** Bundlerと$LOAD_PATH
+   - Bundlerはロードパスを適切に設定
+**** ロードパスの設定の確認
    - bundle exec irb
-   - Gemfile
 
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
