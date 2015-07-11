@@ -341,6 +341,17 @@ bundle gem my_gem_name
 **** ロードパスの設定の確認
    - bundle exec irb
 
+** TODO 補足資料
+*** 補足資料
+**** GitHub への公開鍵登録など
+     - github-connect.sh
+     - 注意：画面が乱れたら再ログイン
+**** GitHub用CLI
+    - 演習用仮想環境には hub コマンドがインストール済み
+      [[https://github.com/github/hub][github/hub]]
+**** Editor
+    - VIMにする方法
+      git config --global core.editor "vim" 
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
 **** 課題
@@ -629,7 +640,9 @@ test
      2. 魔法などどこにもない！
      3. 英語の原典に慣れ親しもう
 
-* COMMENT 補足資料
+* 補足資料
+
+** COMMENT 補足資料
   - Rubyの入門
     [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]
   - Rubyの記号
