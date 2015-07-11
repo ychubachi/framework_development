@@ -438,7 +438,7 @@ require "bundler/gem_tasks"
 *** bundle gemのオプション
 **** minitestを使う場合
 #+begin_src bash
-bundle gem gem_mini_test --test=minitest
+bundle gem gem_minitest --test=minitest
 #+end_src
 
 *** minitest用のRakefile
@@ -475,10 +475,6 @@ test
 *** Assertion
     - Assertionとは？
       - [[http://docs.ruby-lang.org/ja/2.1.0/class/MiniTest=3a=3aAssertions.html][module MiniTest::Assertions]]
-*** Gem版minitest
-**** コード
-    - GitHub参照
-      - [[https://github.com/ychubachi/gem_minitest][ychubachi/gem_minitest]]
 
 ** 演習課題
 *** 6-1 Gemの作成
@@ -487,8 +483,12 @@ test
 **** コマンド
 
 #+begin_src bash
-  bundle gem mini_test_practice --test=minitest
+  bundle gem minitest_practice --test=minitest
 #+end_src
+
+**** サンプルコード
+     - [[https://github.com/ychubachi/minitest_sample][ychubachi/minitest_sample]]
+
 
 *** 6-2 メソッドの作成(1)
 **** 課題
