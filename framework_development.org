@@ -590,7 +590,7 @@ test
 *** 7-2 Travis CI
 **** 課題
      - GitHubとTravis CIを連携させ，継続的統合を行いなさい
-* TODO 第8章 GitHubを用いた開発
+* 第8章 GitHubを用いた開発演習
 ** GitHubとは
 *** GitHubについて
     - Web サイト
@@ -604,25 +604,31 @@ test
       - コード解析
 
 *** GitHub Flow
-    - Git-flow vs. GitHub Flow
-      - [[https://gist.github.com/Gab-km/3705015#github-flow-1][GitHub Flow (Japanese translation)]]
+    - Git-flow
+      - GitHub が登場する以前、 Git-flow が提唱された
+      - [[http://nvie.com/posts/a-successful-git-branching-model/][A successful Git branching model » nvie.com]]
+    - GitHub flow
+      - GitHub により、よりシンプルで強力なワークフローが可能に
+      - [[http://scottchacon.com/2011/08/31/github-flow.html][GitHub Flow – Scott Chacon]]
+      - [[https://gist.github.com/Gab-km/3705015][GitHub Flow (Japanese translation)]]
+    - この演習では GitHub flow を学ぶ
 
-*** コンフリクトについて
+*** GitHub flow におけるコンフリクトについて
     - マージのコンフリクト
-      - GitHub に提出した Pull requests が自動的にマージできない
+      - GitHub に提出した Pull requests が自動的にマージできないこと
     - 基本的な対処法
       - コンフリクトは、コードの同じ箇所を複数の人が別々に編集すると発生
       - 初心者は、演習の最初の方では「他人と同じファイルを編集しない」こと
 	にして、操作になれる
       - 上達したら積極的にコンフリクトを起こしてみて、その解決方法を学ぶ
       - Pull requests でコンフリクトが発生し、自動的にマージできない状態に
-	なったら、その PR を送った人がコンフリクトを自分で解消する
+	なったら、 その PR を送った人がコンフリクトを自分で解消する
 
 ** ペアで行う GitHub
 *** ペアで GitHub を使ってみよう
     1. 隣同士でペアを組む
     2. レポジトリを作成する（どちらか一方）
-       - =bundle gem= でひな形を作る
+       - =bundle gem= でひな形を作る（初心者は Gem でなくても良い）
     3. レポジトリの Collaborators に登録する
     4. レポジトリに対して、次のことを行う
        - Pull requests を利用してみる
@@ -644,8 +650,7 @@ test
        - 課題1が終わったペアから順番にグループ編成
     2. 作りたい Gem について相談する
        - テーマはなんでも良い
-         - コマンドラインツール
-         - Web API を利用したツール
+         - Web API を利用したコマンドラインツールなど
        - ある程度の役割分担も決めておく
     3. レポジトリを作成する（代表者1名）
        - Gem を作成する
@@ -707,9 +712,11 @@ test
      2. 魔法などどこにもない！
      3. 英語の原典に慣れ親しもう
 
-* COMMENT 補足資料
+* COMMENT 次年度に向けて
 ** 授業の進め方
    - 2015年度は、第5、6章をまとめて行った
+   - 次年度は統合する
+     - 「Rakeによるタスクの実行とテスト」
 ** 補足資料
   - Rubyの入門
     [[http://dotinstall.com/lessons/basic_ruby_v2][Ruby入門 (全23回) - プログラミングならドットインストール]]
