@@ -624,6 +624,25 @@ test
       - Pull requests でコンフリクトが発生し、自動的にマージできない状態に
 	なったら、 その PR を送った人がコンフリクトを自分で解消する
 
+*** 基本的な git コマンド
+**** 新しくブランチを作成してチェックアウトする
+#+begin_src bash
+git checkout -b some_new_feature
+#+end_src
+
+**** ブランチをGitHubにpushする
+#+begin_src bash
+git add .
+git commit -m '（作業内容）'
+git push -u origin some_new_feature
+#+end_src
+
+**** master を最新版にする
+#+begin_src bash
+git checkout master
+git pull
+#+end_src
+
 ** ペアで行う GitHub
 *** ペアで GitHub を使ってみよう
     1. 隣同士でペアを組む
