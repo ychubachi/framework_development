@@ -693,6 +693,27 @@ git pull
     4. RubyGems.org へのディプロイ
     5. その他、GitHub の各種機能の活用
 
+** TODO 補足資料
+*** Travis CI ステータスイメージ
+**** Travis CIのテスト結果を分かりやすく共有したい
+     - Travis CIのステータスイメージをREADME.mdに埋め込むことができる
+       - [[http://docs.travis-ci.com/user/status-images/][Embedding Status Images - Travis CI]]
+       - [[http://blog.ruedap.com/2013/09/02/travis-ci-coveralls-code-climate-github-badge][Travis CIとCoverallsとCode Climateを使ってGitHubリポジトリにバッジを付ける - アインシュタインの電話番号]]
+*** GitHubでのコンフリクトの解消方法
+**** 前提
+     - new_feature ブランチで作業中であり、最新の更新は commit 済
+
+**** 操作（一例）
+
+#+begin_src bash
+git fetch origin            # orign の最新版を取得
+git checkout master         # master をチェックアウト
+git pull origin master      # 手元の master を最新版にする
+git checkout new_feature    # 作業中のブランチに戻る
+git merge master            # この後、コンフリクトを修正する
+git push origin new_feature # 作業中のブランチを再度、push
+#+end_src
+
 * 第9章 まとめ
 ** この授業で取り上げたこと
 *** Rubyのエコシステム(1)
