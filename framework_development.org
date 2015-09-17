@@ -74,7 +74,7 @@
 #      - 動画の視聴及び作業のために2時間程度かかる
 
 *** インストール方法（Mac）
-**** Homebrowのインストール
+**** Homebrewのインストール
     - [[http://brew.sh/index.html][Homebrew — The missing package manager for OS X]]
     - [[http://caskroom.io/][Homebrew Cask]]
 
