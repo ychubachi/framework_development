@@ -12,7 +12,7 @@
 #+LATEX_CLASS: beamer_lecture
 #+LaTeX_CLASS_OPTIONS: [t, aspectratio=169]
 
-#+TITLE: フレームワーク開発特論（2015）
+#+TITLE: フレームワーク開発特論（2016）
 #+AUTHOR: 中鉢 欣秀
 #+DATE:
 
