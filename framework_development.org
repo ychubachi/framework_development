@@ -245,6 +245,7 @@ require 'mathn'
      - 下記のガイドに記されたサンプルを実行し，
        =gem= コマンドの基本的な使い方を学ぶ
      - [[http://guides.rubygems.org/rubygems-basics/][RubyGems Basics - RubyGems Guides]]
+     - ※ri及びserverは飛ばしてよい
 *** 課題3-2
      - gemをダウンロードして中身を見てみる
      - =search=, =fetch=,  =unpack= などのコマンドを活用する
