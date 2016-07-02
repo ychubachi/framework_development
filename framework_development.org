@@ -240,9 +240,6 @@ require 'mathn'
     - [[http://guides.rubygems.org/security/][Security - RubyGems Guides]]
       - セキュリティ（省略）
     - [[http://guides.rubygems.org/patterns/][Patterns - RubyGems Guides]]
-** 補足
-*** MiniTest
-    - [[http://docs.ruby-lang.org/ja/2.0.0/library/minitest=2funit.html][library minitest/unit]]
 ** 演習課題
 *** 課題3-1
      - 下記のガイドに記されたサンプルを実行し，
