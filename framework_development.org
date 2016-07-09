@@ -365,7 +365,7 @@ vi ychubachi_helloworld.gemspec # TODO: を削除
 bundle exec rake build # OK
 #+end_src
 
-Gemへの機能の追加
+Gemへの機能の追加。「lib/ychubachi_helloworld.rb」を編集する。
 
 #+begin_src ruby
 require "ychubachi_helloworld/version"
