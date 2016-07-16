@@ -382,17 +382,6 @@ bin/console # 環境設定済みのirbの起動
 greeting # 定義したメソッドの実行
 #+end_src
 
-** TODO 補足資料
-*** 補足資料（省略）
-**** GitHub への公開鍵登録など
-     - github-connect.sh
-     - 注意：画面が乱れたら再ログイン
-**** GitHub用CLI
-    - 演習用仮想環境には hub コマンドがインストール済み
-      [[https://github.com/github/hub][github/hub]]
-**** Editor
-    - VIMにする方法
-      git config --global core.editor "vim" 
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
 **** 課題
@@ -601,6 +590,29 @@ test
 *** サンプル
     - Guard用の設定を行ったコード
       - [[https://github.com/ychubachi/mini_test_practice][ychubachi/mini_test_practice]]
+** GitHubの準備
+*** GitHubの設定と使用
+**** GitHub への公開鍵登録など
+     - github-connect.sh
+     - 注意：画面が乱れたら再ログイン
+**** GitHub用CLI
+    - 演習用仮想環境には hub コマンドがインストール済み
+      [[https://github.com/github/hub][github/hub]]
+**** COMMENT Editorの変更
+    - VIMにする方法
+      git config --global core.editor "vim" 
+*** Gitコマンドの基本
+**** 基本的なコマンド
+
+- 現在のリポジトリをGitHubで公開
+  - hub create
+- 変更箇所をまとめて登録
+  - git add .
+- 登録した変更のコミット
+  - git commit -m '<コミットメッセージ>'
+- コミットのプッシュ
+  - git push
+
 ** Travis CIによる方法
 *** Travis CIとは？
     - GitHubと連携し，新たなコミットがGitHubにPushされたら
