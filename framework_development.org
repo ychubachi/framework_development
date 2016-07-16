@@ -587,18 +587,18 @@ test
 *** Gitコマンドの基本
 **** 基本的なコマンド
 - 現在のリポジトリをGitHubで公開
-  - hub create
+  - git create
 - 変更箇所をまとめて登録
   - git add .
 - 登録した変更のコミット
   - git commit -m '<コミットメッセージ>'
 - コミットのプッシュ
   - git push
+
 **** 補足: =git ls-files= について（Bundler）
     - gitにindexされているファイルの一覧
     - 新しいファイルは，ステージング領域にaddされると表示に加わる
     - =.gitignore= で無視するファイルを設定できる
-
 
 ** Guardによる方法
 *** Guardとは？
