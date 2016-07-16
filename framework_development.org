@@ -308,11 +308,6 @@ bundle gem my_gem_name
   └── my_gem_name.gemspec
 #+end_src
 
-*** =git ls-files= について
-    - gitにindexされているファイルの一覧
-    - 新しいファイルは，ステージング領域にaddされると表示に加わる
-    - =.gitignore= で無視するファイルを設定できる
-
 *** 雛形のbuild
     - =*.gemspec= のTODOを外す（内容をきちんと書く）
     - =rake build= でbuildできる
@@ -576,6 +571,35 @@ test
      - https://github.com/ychubachi/mini_test_practice
 
 * 第7章 テスト自動化と統合テスト
+** GitHubの準備
+*** GitHubの設定と使用
+**** GitHubによる公開
+     - コンポーネント全体をGitで管理し、GitHubで公開する
+**** GitHub への公開鍵登録など
+     - github-connect.sh
+     - 注意：画面が乱れたら再ログイン
+**** GitHub用CLI
+    - 演習用仮想環境には hub コマンドがインストール済み
+      [[https://github.com/github/hub][github/hub]]
+**** COMMENT Editorの変更
+    - VIMにする方法
+      git config --global core.editor "vim" 
+*** Gitコマンドの基本
+**** 基本的なコマンド
+- 現在のリポジトリをGitHubで公開
+  - hub create
+- 変更箇所をまとめて登録
+  - git add .
+- 登録した変更のコミット
+  - git commit -m '<コミットメッセージ>'
+- コミットのプッシュ
+  - git push
+**** 補足: =git ls-files= について（Bundler）
+    - gitにindexされているファイルの一覧
+    - 新しいファイルは，ステージング領域にaddされると表示に加わる
+    - =.gitignore= で無視するファイルを設定できる
+
+
 ** Guardによる方法
 *** Guardとは？
    - =Guard= とは，ファイルの更新を監視して，更新があれば指定されたタスクを
@@ -590,29 +614,6 @@ test
 *** サンプル
     - Guard用の設定を行ったコード
       - [[https://github.com/ychubachi/mini_test_practice][ychubachi/mini_test_practice]]
-** GitHubの準備
-*** GitHubの設定と使用
-**** GitHub への公開鍵登録など
-     - github-connect.sh
-     - 注意：画面が乱れたら再ログイン
-**** GitHub用CLI
-    - 演習用仮想環境には hub コマンドがインストール済み
-      [[https://github.com/github/hub][github/hub]]
-**** COMMENT Editorの変更
-    - VIMにする方法
-      git config --global core.editor "vim" 
-*** Gitコマンドの基本
-**** 基本的なコマンド
-
-- 現在のリポジトリをGitHubで公開
-  - hub create
-- 変更箇所をまとめて登録
-  - git add .
-- 登録した変更のコミット
-  - git commit -m '<コミットメッセージ>'
-- コミットのプッシュ
-  - git push
-
 ** Travis CIによる方法
 *** Travis CIとは？
     - GitHubと連携し，新たなコミットがGitHubにPushされたら
