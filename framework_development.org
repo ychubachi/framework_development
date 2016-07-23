@@ -645,10 +645,10 @@ bundle exec guard init
     - 設定ファイル
       - =.travis.yml= は =bundle gem= コマンドを実行した段階で
 	生成されている
-    - GitHubのフックを設定する
-      1. GitHubでプロジェクトのリポジトリを開く
-      2. Settings -> Webhooks & Services
-      3. Add Services ボタンから Travis CI を選択
+    - Travis CIにログインする
+      1. GitHubのリポジトリをTravis CIで検索する
+      2. 検索結果にリポジトリがでてくる
+      3. Acctivateする
 
 *** コマンドで行う場合
       - =travis= コマンドをインストール
