@@ -611,6 +611,22 @@ test
     - MiniTest用のプラグイン
       - [[https://github.com/guard/guard-minitest][guard/guard-minitest]]
     - Gemfileに追加し，bundle installが必要
+*** Guardfileの作成
+- Guardfileの生成
+
+#+begin_src bash
+bundle exec guard init
+#+end_src
+
+- Guardfileを次のとおり修正
+
+#+begin_src ruby
+  # with Minitest::Unit
+  watch(%r{^test/(.*)\/?(.*)_test\.rb$})
+  watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { |m| "test/#{m[1]}#{m[2]}_test.rb" }
+  watch(%r{^test/test_helper\.rb$})      { 'test' }
+#+end_src
+
 *** サンプル
     - Guard用の設定を行ったコード
       - [[https://github.com/ychubachi/mini_test_practice][ychubachi/mini_test_practice]]
