@@ -593,7 +593,8 @@ test
 - 登録した変更のコミット
   - git commit -m '<コミットメッセージ>'
 - コミットのプッシュ
-  - git push
+  - git push -u origin master
+    - 2回目以降は「-u origin master」は不要
 
 **** 補足: =git ls-files= について（Bundler）
     - gitにindexされているファイルの一覧
