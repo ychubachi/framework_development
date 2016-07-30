@@ -720,6 +720,7 @@ git push -u origin master
 
 **** コラボレーターがソースコードを入手する方法
 
+下記の「ychubachi」の部分を代表者のアカウント名にする．
 #+begin_src bash
 git clone ychubachi/ychubachi_2016_gem
 #+end_src
