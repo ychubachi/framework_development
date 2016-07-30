@@ -308,11 +308,6 @@ bundle gem my_gem_name
   └── my_gem_name.gemspec
 #+end_src
 
-*** =git ls-files= について
-    - gitにindexされているファイルの一覧
-    - 新しいファイルは，ステージング領域にaddされると表示に加わる
-    - =.gitignore= で無視するファイルを設定できる
-
 *** 雛形のbuild
     - =*.gemspec= のTODOを外す（内容をきちんと書く）
     - =rake build= でbuildできる
@@ -382,17 +377,6 @@ bin/console # 環境設定済みのirbの起動
 greeting # 定義したメソッドの実行
 #+end_src
 
-** TODO 補足資料
-*** 補足資料（省略）
-**** GitHub への公開鍵登録など
-     - github-connect.sh
-     - 注意：画面が乱れたら再ログイン
-**** GitHub用CLI
-    - 演習用仮想環境には hub コマンドがインストール済み
-      [[https://github.com/github/hub][github/hub]]
-**** Editor
-    - VIMにする方法
-      git config --global core.editor "vim" 
 ** 演習課題
 *** 4-1 Bundlerで簡単なGemを作ってみる
 **** 課題
@@ -587,6 +571,36 @@ test
      - https://github.com/ychubachi/mini_test_practice
 
 * 第7章 テスト自動化と統合テスト
+** GitHubの準備
+*** GitHubの設定と使用
+**** GitHubによる公開
+     - コンポーネント全体をGitで管理し、GitHubで公開する
+**** GitHub への公開鍵登録など
+     - github-connect.sh
+     - 注意：画面が乱れたら再ログイン
+**** GitHub用CLI
+    - 演習用仮想環境には hub コマンドがインストール済み
+      [[https://github.com/github/hub][github/hub]]
+**** COMMENT Editorの変更
+    - VIMにする方法
+      git config --global core.editor "vim" 
+*** Gitコマンドの基本
+**** 基本的なコマンド
+- 現在のリポジトリをGitHubで公開
+  - git create
+- 変更箇所をまとめて登録
+  - git add .
+- 登録した変更のコミット
+  - git commit -m '<コミットメッセージ>'
+- コミットのプッシュ
+  - git push -u origin master
+    - 2回目以降は「-u origin master」は不要
+
+**** 補足: =git ls-files= について（Bundler）
+    - gitにindexされているファイルの一覧
+    - 新しいファイルは，ステージング領域にaddされると表示に加わる
+    - =.gitignore= で無視するファイルを設定できる
+
 ** Guardによる方法
 *** Guardとは？
    - =Guard= とは，ファイルの更新を監視して，更新があれば指定されたタスクを
@@ -597,7 +611,28 @@ test
     - Guardにはプラグイン機能がある
     - MiniTest用のプラグイン
       - [[https://github.com/guard/guard-minitest][guard/guard-minitest]]
-    - Gemfileに追加し，bundle installが必要
+    - .gemspecの最後の方に下記を追加してbundle install
+
+#+begin_src ruby
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-minitest"
+#+end_src
+
+*** Guardfileの作成
+- Guardfileの生成
+
+#+begin_src bash
+bundle exec guard init
+#+end_src
+
+- Guardfileの当該箇所を次のとおり修正
+
+#+begin_src ruby
+  # with Minitest::Unit
+  watch(%r{^test/(.*)\/?(.*)_test\.rb$})
+  watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { |m| "test/#{m[1]}#{m[2]}_test.rb" }
+#+end_src
+
 *** サンプル
     - Guard用の設定を行ったコード
       - [[https://github.com/ychubachi/mini_test_practice][ychubachi/mini_test_practice]]
@@ -615,10 +650,10 @@ test
     - 設定ファイル
       - =.travis.yml= は =bundle gem= コマンドを実行した段階で
 	生成されている
-    - GitHubのフックを設定する
-      1. GitHubでプロジェクトのリポジトリを開く
-      2. Settings -> Webhooks & Services
-      3. Add Services ボタンから Travis CI を選択
+    - Travis CIにログインする
+      1. GitHubのリポジトリをTravis CIで検索する
+      2. 検索結果にリポジトリがでてくる
+      3. Acctivateする
 
 *** コマンドで行う場合
       - =travis= コマンドをインストール
