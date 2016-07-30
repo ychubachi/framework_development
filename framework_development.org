@@ -738,7 +738,15 @@ git commit -m '（作業内容）'
 git push -u origin some_new_feature
 #+end_src
 
-**** master を最新版にする
+**** プルリクエストとマージ
+
+- ブランチがGitHubに登録されたことを確認し，Pull requestを作成する
+- Pull requestのレビューが済んだらマージする
+
+**** ローカルのmaster を最新版にする
+
+- GitHubで行ったマージをローカルに反映させる
+
 #+begin_src bash
 git checkout master
 git pull
