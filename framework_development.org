@@ -701,7 +701,7 @@ bundle exec guard init
 	なったら、 その PR を送った人がコンフリクトを自分で解消する
 
 *** Gemの作成とリポジトリへの登録
-**** Gemの作成から登録まで
+**** Gemの作成からGitHubへの登録まで
 
 #+begin_src bash
 bundle gem ychubachi_2016_gem
