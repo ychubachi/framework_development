@@ -711,6 +711,12 @@ git create
 git push -u origin master
 #+end_src
 
+**** コラボレーターの追加
+
+- GitHubのリポジトリをブラウザで開く．
+- Settings -> Collaborators を選ぶ
+- メンバーを招待する
+
 *** 基本的な git コマンド
 **** 新しくブランチを作成してチェックアウトする
 #+begin_src bash
