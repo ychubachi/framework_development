@@ -718,6 +718,12 @@ git push -u origin master
 - メンバーを招待する
 - 招待されたメンバーには確認のメールが届くので，リンクをクリックする
 
+**** コラボレーターがソースコードを入手する方法
+
+#+begin_src bash
+git clone ychubachi/ychubachi_2016_gem
+#+end_src
+
 *** 基本的な git コマンド
 **** 新しくブランチを作成してチェックアウトする
 #+begin_src bash
