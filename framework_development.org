@@ -665,16 +665,15 @@ test
       - Pull requests でコンフリクトが発生し、自動的にマージできない状態に
 	なったら、 その PR を送った人がコンフリクトを自分で解消する
 
-*** リポジトリの作成とclone
-**** リポジトリの作成方法
-     - git create コマンドを利用する方法
-     - GitHub 上で作成する方法
-**** リポジトリのclone
-     - Web ブラウザで GitHub のURLにアクセス
-     - ページに表示されている 「SSH clone URL」 を探す
-**** 端末上でgit clone コマンドを実行する
+*** Gemの作成とリポジトリへの登録
+**** Gemの作成から登録まで
+
 #+begin_src bash
-git clone <SSH clone URL>
+bundle gem ychubachi_2016_gem
+cd ychubachi_2016_gem/
+git commit -m 'Initial commit'
+git create
+git push -u origin master
 #+end_src
 
 *** 基本的な git コマンド
